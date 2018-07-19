@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43668893, g: 0.4842832, b: 0.56452656, a: 1}
+  m_IndirectSpecularColor: {r: 0.17277752, g: 0.2159006, b: 0.2978295, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -544,6 +544,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hightlightObject: {fileID: 0}
   grabLocation: {fileID: 0}
+--- !u!1 &951042635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 951042637}
+  - component: {fileID: 951042636}
+  m_Layer: 0
+  m_Name: CheckpoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &951042636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 951042635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c53c4cd5393d44088209cfb4d1efaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointPrefab: {fileID: 1701258217142114, guid: bc84a60dd4e1d491b8e12df1a2275d84,
+    type: 2}
+  numberOfCheckpoints: 10
+  checkpoints: []
+--- !u!4 &951042637
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 951042635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1074143681
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,6 +978,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114143222754768320, guid: 6f3c63a7f242e4bd895c23a61c2de7ea,
+        type: 2}
+      propertyPath: plane
+      value: 
+      objectReference: {fileID: 164687885}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f3c63a7f242e4bd895c23a61c2de7ea, type: 2}
   m_IsPrefabParent: 0
