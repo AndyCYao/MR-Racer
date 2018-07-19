@@ -20,22 +20,43 @@ using System.Linq;
 using BEDummyGoogleVR;
 namespace BEDummyGoogleVR { }
 
-[RequireComponent (typeof (Rigidbody))]
+[RequireComponent(typeof(Rigidbody))]
 public class CarController : MonoBehaviour
 {
-    const float C_MaxForwardForce = 4f;
-    const float C_MaxAngularVelocity = 20f;
-    [SerializeField] float gas = 0;
-    [SerializeField] float angularVelocity = 0f;
+    [Serializable] class CarControlInput  {
+        public float motorTorque = 0;
+        public float steerAngle = 0;
+        public float brakeTorque = 0;
+    }
+
+    [SerializeField] CarControlInput m_CarControlInput;
+
+    [SerializeField] float m_MaxMotorForce, m_MaxSteerForce, m_MaxBrakeForce;
+    [SerializeField] Transform m_WheelParent;
+    public enum WheelPosition { RearLeft, RearRight, FrontLeft, FrontRight };
+    /// <summary>
+    /// Array of wheel colliders arranged in the following order:
+    /// 0: FrontLeft, 1: FrontRight, 2: RearLeft, 3: RearRight
+    /// </summary>
+    /// 
+    WheelCollider[] m_WheelColliders;
+
+
+
+
+    WheelCollider GetWheelCollider(WheelPosition wheelPosition)
+    {
+        return m_WheelColliders[(int)wheelPosition];
+    }
 
     BEScene beScene;
     BridgeEngineUnity beUnity;
 
     //public GameObject placementRing;
     //Transform touch;
-    public List<GameObject> placeObjects;
+ //   public List<GameObject> placeObjects;
     List<EventTrigger> worldEventTriggers = new List<EventTrigger>();
-    const float FallHeight = 0.3f;
+   // const float FallHeight = 0.3f;
     Rigidbody m_RigidBody;
 
     /**
@@ -43,6 +64,10 @@ public class CarController : MonoBehaviour
      */
     void Awake()
     {
+        m_RigidBody = GetComponent<Rigidbody>();
+
+        m_WheelColliders = m_WheelParent.GetComponentsInChildren<WheelCollider>();
+        m_CarControlInput = new CarControlInput();
         beScene = BEScene.FindBEScene();
         if (beScene == null)
         {
@@ -61,17 +86,14 @@ public class CarController : MonoBehaviour
             Debug.LogWarning("Cannot connect to BridgeEngineUnity controller.");
         }
 
-        m_RigidBody = GetComponent<Rigidbody>();
+
     }
 
     // Use this for initialization
     void Start()
     {
-        // Deactivate all the objects to place by default.
-        foreach (GameObject o in placeObjects)
-        {
-            o.SetActive(false);
-        }
+
+
 
         // Hide placement ring by default on start.
         //placementRing.SetActive(false);
@@ -79,7 +101,7 @@ public class CarController : MonoBehaviour
         // Create an EventTriggers on every collidable mesh in BEScene
         BEScene beScene = BEScene.FindBEScene();
         Debug.Assert(beScene != null, "BESampleMRController requires a valid @BridgeEngineScene to work properly");
-
+        /*
         foreach (MeshCollider collider in beScene.GetComponentsInChildren<MeshCollider>())
         {
             var trigger = collider.gameObject.AddComponent<EventTrigger>();
@@ -94,7 +116,7 @@ public class CarController : MonoBehaviour
             entryExit.eventID = EventTriggerType.PointerExit;
             entryExit.callback.AddListener((data) => { OnPlaceHilight(false); });
             trigger.triggers.Add(entryExit);
-        }
+        }*/
     }
 
     /// Utility to get the GameObject bounds
@@ -125,14 +147,36 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        /*if (placementRing.activeSelf)
+
+
+        GetWheelCollider(WheelPosition.RearLeft).motorTorque = GetWheelCollider(WheelPosition.RearRight).motorTorque = m_CarControlInput.motorTorque;
+        GetWheelCollider(WheelPosition.FrontLeft).steerAngle = GetWheelCollider(WheelPosition.FrontRight).steerAngle = m_CarControlInput.steerAngle;
+
+        Debug.Log(GetWheelCollider(WheelPosition.RearLeft).motorTorque);
+
+        if (Input.GetKey(KeyCode.Space))
         {
-            RaycastResult raycastResult = GvrPointerInputModule.CurrentRaycastResult;
-            placementRing.transform.position = raycastResult.worldPosition;
+            GetWheelCollider(WheelPosition.RearLeft).brakeTorque = GetWheelCollider(WheelPosition.RearRight).brakeTorque = m_MaxBrakeForce;
+
+        }
+        /*
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            GetWheelCollider(WheelPosition.RearLeft).brakeTorque = GetWheelCollider(WheelPosition.RearRight).brakeTorque = 0;
+        }
+
+        if (Input.GetAxis("Vertical").Equals(0f))
+        {
+            GetWheelCollider(WheelPosition.RearLeft).brakeTorque = GetWheelCollider(WheelPosition.RearRight).brakeTorque = 0.1f;
+
+        }
+        else
+        {
+            GetWheelCollider(WheelPosition.RearLeft).brakeTorque = GetWheelCollider(WheelPosition.RearRight).brakeTorque = 0f;
         }*/
 
-       // m_RigidBody.AddRelativeForce ( m_RigidBody.mass * (gas * transform.forward) ) ;
-       // m_RigidBody.AddTorque ()
+        Debug.LogFormat("Vertical {0}", Input.GetAxis("Vertical").Equals(0f));
+       // Debug.LogFormat("Brake ", GetWheelCollider(WheelPosition.RearLeft).brakeTorque);
     }
 
     /**
@@ -140,6 +184,7 @@ public class CarController : MonoBehaviour
      */
     public void OnButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
     {
+        return;
         /*
         if (down == BEControllerButtons.ButtonPrimary && placementRing.activeSelf && placeObjects.Count() > 0)
         {
@@ -172,16 +217,15 @@ public class CarController : MonoBehaviour
 
     void OnTouchEvent(Vector2 position, BEControllerTouchStatus touchStatus)
     {
-        if (touchStatus == BEControllerTouchStatus.TouchIdle || touchStatus == BEControllerTouchStatus.TouchMove)
+        if (touchStatus == BEControllerTouchStatus.TouchFirstContact || touchStatus == BEControllerTouchStatus.TouchMove)
         {
-            gas = m_RigidBody.mass * position.y * C_MaxForwardForce;
-            m_RigidBody.AddRelativeForce(gas * Vector3.forward * Time.deltaTime);
-            angularVelocity = position.x * C_MaxAngularVelocity;
-            m_RigidBody.AddRelativeTorque(Vector3.right * angularVelocity * Time.deltaTime);
+            m_CarControlInput.motorTorque = m_MaxMotorForce * position.y;
+            m_CarControlInput.steerAngle = m_MaxSteerForce * position.x;
         }
         // touchStatus = BEControllerTouchStatus.
         if (touchStatus == BEControllerTouchStatus.TouchReleaseContact){
-            gas = 0;
+            m_CarControlInput.motorTorque = m_CarControlInput.steerAngle = 0;
+
         }
 
     }
