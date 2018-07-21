@@ -41,6 +41,8 @@ public class BEScene : MonoBehaviour {
     Material sceneMaterial = null;
 
     void Start() {
+        gameObject.layer = LayerMask.NameToLayer ("Platform"); // 8 is Platform Layer
+
         ApplyCorrectMaterialAndLayerSetting();
     }
 
