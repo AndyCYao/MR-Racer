@@ -10,6 +10,10 @@
  *     Pull trigger to place objects into the scene.
  */
 
+//#define PADCONTROL
+//#define PADROTATIONTRIGGERACCELERATION
+#define ORIENTATIONROTATIONCONTROL
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
@@ -23,27 +27,66 @@ namespace BEDummyGoogleVR { }
 [RequireComponent(typeof(Rigidbody))]
 public class CarController : MonoBehaviour
 {
-    [Serializable] class CarControlInput  {
+
+    #region CONSTANTS
+    const float c_MinimumRotationMargin = 2f;
+
+    #endregion
+
+
+    /// <summary>
+    /// Store motor information of the car
+    /// </summary>
+    [Serializable]
+    class CarControlInput
+    {
         public float motorTorque = 0;
         public float steerAngle = 0;
         public float brakeTorque = 0;
     }
 
+
     [SerializeField] CarControlInput m_CarControlInput;
 
-    [SerializeField] float m_MaxMotorForce, m_MaxSteerForce, m_MaxBrakeForce;
+    [SerializeField]
+    float
+        /// <summary>
+        /// max motor force.
+        /// </summary>
+        m_MaxMotorForce,
+
+    /// <summary>
+    /// The max steer force.
+    /// </summary>
+        m_MaxSteerAngle,
+
+        /// <summary>
+        /// The max brake force.
+        /// </summary>
+        m_MaxBrakeForce;
+
+    [SerializeField] Transform m_CentreOfMass;
     [SerializeField] Transform m_WheelParent;
-    public enum WheelPosition { RearLeft, RearRight, FrontLeft, FrontRight };
+
+    /// <summary>
+    /// Wheel position enum 
+    /// 0: RearLeft, 1: RearRight, 2: FrontLeft, 3: FrontRight
+    /// </summary>
+    public enum WheelPosition : int { RearLeft, RearRight, FrontLeft, FrontRight };
+
     /// <summary>
     /// Array of wheel colliders arranged in the following order:
     /// 0: FrontLeft, 1: FrontRight, 2: RearLeft, 3: RearRight
-    /// </summary>
-    /// 
+    /// </summary> 
     WheelCollider[] m_WheelColliders;
 
 
 
-
+    /// <summary>
+    /// Get the correct wheel colllider given the Wheel position parameter
+    /// </summary>
+    /// <returns>The wheel collider.</returns>
+    /// <param name="wheelPosition">Wheel position.</param>
     WheelCollider GetWheelCollider(WheelPosition wheelPosition)
     {
         return m_WheelColliders[(int)wheelPosition];
@@ -54,9 +97,9 @@ public class CarController : MonoBehaviour
 
     //public GameObject placementRing;
     //Transform touch;
- //   public List<GameObject> placeObjects;
+    //   public List<GameObject> placeObjects;
     List<EventTrigger> worldEventTriggers = new List<EventTrigger>();
-   // const float FallHeight = 0.3f;
+    // const float FallHeight = 0.3f;
     Rigidbody m_RigidBody;
 
     /**
@@ -67,7 +110,17 @@ public class CarController : MonoBehaviour
         m_RigidBody = GetComponent<Rigidbody>();
 
         m_WheelColliders = m_WheelParent.GetComponentsInChildren<WheelCollider>();
+
+
+        if (m_CentreOfMass)
+        {
+            //  m_RigidBody.centerOfMass = m_CentreOfMass.localPosition;
+        }
+
         m_CarControlInput = new CarControlInput();
+
+
+
         beScene = BEScene.FindBEScene();
         if (beScene == null)
         {
@@ -78,6 +131,7 @@ public class CarController : MonoBehaviour
         beUnity = BridgeEngineUnity.main;
         if (beUnity)
         {
+            beUnity.onControllerMotionEvent.AddListener(OnMotionEvent);
             beUnity.onControllerButtonEvent.AddListener(OnButtonEvent);
             beUnity.onControllerTouchEvent.AddListener(OnTouchEvent);
         }
@@ -99,9 +153,9 @@ public class CarController : MonoBehaviour
         //placementRing.SetActive(false);
 
         // Create an EventTriggers on every collidable mesh in BEScene
-        BEScene beScene = BEScene.FindBEScene();
-        Debug.Assert(beScene != null, "BESampleMRController requires a valid @BridgeEngineScene to work properly");
-        /*
+        // BEScene beScene = BEScene.FindBEScene();
+        //Debug.Assert(beScene != null, "BESampleMRController requires a valid @BridgeEngineScene to work properly");
+
         foreach (MeshCollider collider in beScene.GetComponentsInChildren<MeshCollider>())
         {
             var trigger = collider.gameObject.AddComponent<EventTrigger>();
@@ -116,7 +170,7 @@ public class CarController : MonoBehaviour
             entryExit.eventID = EventTriggerType.PointerExit;
             entryExit.callback.AddListener((data) => { OnPlaceHilight(false); });
             trigger.triggers.Add(entryExit);
-        }*/
+        }
     }
 
     /// Utility to get the GameObject bounds
@@ -152,6 +206,17 @@ public class CarController : MonoBehaviour
         GetWheelCollider(WheelPosition.RearLeft).motorTorque = GetWheelCollider(WheelPosition.RearRight).motorTorque = m_CarControlInput.motorTorque;
         GetWheelCollider(WheelPosition.FrontLeft).steerAngle = GetWheelCollider(WheelPosition.FrontRight).steerAngle = m_CarControlInput.steerAngle;
 
+#if UNITY_EDITOR
+        if (!Mathf.Approximately(Input.GetAxis("Vertical"), 0f))
+        {
+            GetWheelCollider(WheelPosition.RearLeft).motorTorque = GetWheelCollider(WheelPosition.RearRight).motorTorque = Input.GetAxis("Vertical") * m_MaxMotorForce;
+        }
+        if (!Mathf.Approximately(Input.GetAxis("Horizontal"), 0f))
+        {
+            GetWheelCollider(WheelPosition.FrontLeft).steerAngle = GetWheelCollider(WheelPosition.FrontRight).steerAngle = Input.GetAxis("Horizontal") * m_MaxSteerAngle;
+        }
+#endif
+
         Debug.Log(GetWheelCollider(WheelPosition.RearLeft).motorTorque);
 
         if (Input.GetKey(KeyCode.Space))
@@ -159,24 +224,10 @@ public class CarController : MonoBehaviour
             GetWheelCollider(WheelPosition.RearLeft).brakeTorque = GetWheelCollider(WheelPosition.RearRight).brakeTorque = m_MaxBrakeForce;
 
         }
-        /*
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            GetWheelCollider(WheelPosition.RearLeft).brakeTorque = GetWheelCollider(WheelPosition.RearRight).brakeTorque = 0;
-        }
 
-        if (Input.GetAxis("Vertical").Equals(0f))
-        {
-            GetWheelCollider(WheelPosition.RearLeft).brakeTorque = GetWheelCollider(WheelPosition.RearRight).brakeTorque = 0.1f;
-
-        }
-        else
-        {
-            GetWheelCollider(WheelPosition.RearLeft).brakeTorque = GetWheelCollider(WheelPosition.RearRight).brakeTorque = 0f;
-        }*/
 
         Debug.LogFormat("Vertical {0}", Input.GetAxis("Vertical").Equals(0f));
-       // Debug.LogFormat("Brake ", GetWheelCollider(WheelPosition.RearLeft).brakeTorque);
+        // Debug.LogFormat("Brake ", GetWheelCollider(WheelPosition.RearLeft).brakeTorque);
     }
 
     /**
@@ -184,49 +235,92 @@ public class CarController : MonoBehaviour
      */
     public void OnButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
     {
-        return;
-        /*
-        if (down == BEControllerButtons.ButtonPrimary && placementRing.activeSelf && placeObjects.Count() > 0)
+        if (current == BEControllerButtons.ButtonPrimary || down == BEControllerButtons.ButtonPrimary)
         {
-            GameObject objectToPlace = placeObjects.First();
-            placeObjects.RemoveAt(0);
-            Vector3 pos = placementRing.transform.position;
-            pos.y += FallHeight; // Fall from above the ground.
-            objectToPlace.transform.position = pos;
-            objectToPlace.SetActive(true);
-
-            // Reset the object's physics.
-            var objectRigidBody = objectToPlace.GetComponent<Rigidbody>();
-            if (objectRigidBody)
+            if (m_CarControlInput.motorTorque < m_MaxMotorForce)
             {
-                objectRigidBody.velocity = Vector3.zero;
-                objectRigidBody.angularVelocity = Vector3.zero;
-            }
+                Debug.Log("Primary held down");
+                m_CarControlInput.motorTorque = Mathf.Clamp(m_CarControlInput.motorTorque + m_MaxMotorForce * Time.deltaTime * 0.2f, 0, m_MaxMotorForce);
 
-            // Clean-up if last object is placed in scene.
-            if (placeObjects.Count() == 0)
-            {
-                OnPlaceHilight(false);
-                foreach (var trigger in worldEventTriggers)
-                {
-                    Destroy(trigger);
-                }
+
             }
-        }*/
+            else
+            {
+                Debug.Log("MotorTorque at maximum");
+                m_CarControlInput.motorTorque = m_MaxMotorForce;
+            }
+        }
+
+        if (up == BEControllerButtons.ButtonPrimary)
+        {
+            m_CarControlInput.motorTorque = 0;
+        }
+
+
+        m_CarControlInput.brakeTorque =
+            (current == BEControllerButtons.ButtonSecondary || down == BEControllerButtons.ButtonSecondary) ? m_MaxBrakeForce : 0f;
+
+
+
+        return;
+
     }
 
     void OnTouchEvent(Vector2 position, BEControllerTouchStatus touchStatus)
     {
         if (touchStatus == BEControllerTouchStatus.TouchFirstContact || touchStatus == BEControllerTouchStatus.TouchMove)
         {
+            #if PADCONTROL || ORIENTATIONROTATIONCONTROL
             m_CarControlInput.motorTorque = m_MaxMotorForce * position.y;
-            m_CarControlInput.steerAngle = m_MaxSteerForce * position.x;
+            #endif
+
+            #if PADCONTROL || PADROTATIONTRIGGERACCELERATION
+            m_CarControlInput.steerAngle = m_MaxSteerAngle * position.x;
+            #endif
         }
-        // touchStatus = BEControllerTouchStatus.
-        if (touchStatus == BEControllerTouchStatus.TouchReleaseContact){
-            m_CarControlInput.motorTorque = m_CarControlInput.steerAngle = 0;
+
+        if (touchStatus == BEControllerTouchStatus.TouchReleaseContact)
+        {
+            m_CarControlInput.steerAngle = 0;
+
+            #if PADCONTROL || ORIENTATIONROTATIONCONTROL
+            m_CarControlInput.motorTorque = 0;
+            #endif
 
         }
 
+    }
+
+
+    void OnMotionEvent(Vector3 position, Quaternion orientation)
+    {
+#if ORIENTATIONROTATIONCONTROL
+  
+        //float toAngle, fromAngle;
+        //Vector3 dumbVector = Vector3.zero;
+        //orientation.ToAngleAxis(out toAngle, out dumbVector);
+        //transform.rotation.ToAngleAxis(out fromAngle, out dumbVector);
+
+        Vector3 toRotation =  Vector3.ProjectOnPlane(orientation.eulerAngles, transform.up);
+        Vector3 fromRotation = Vector3.ProjectOnPlane(transform.eulerAngles, transform.up);
+        //Vector3 x = transform.rotation.eulerAngles;
+        float diffAngle = 
+            ((m_CarControlInput.motorTorque > 0) ? 1 : -1 ) 
+            *
+            (
+                (orientation.eulerAngles.y  - ((orientation.eulerAngles.y   > 180) ? 360 : 0 )) 
+                - 
+                (transform.eulerAngles.y    - ((transform.eulerAngles.y     > 180) ? 360 : 0 ))
+            );
+
+
+
+        // Vector3.SignedAngle(toRotation, fromRotation, transform.up);
+        
+
+        m_CarControlInput.steerAngle =  (Mathf.Abs(diffAngle) > c_MinimumRotationMargin) ?
+            Mathf.Clamp (diffAngle, -m_MaxSteerAngle, m_MaxSteerAngle) : 0;
+        
+#endif
     }
 }

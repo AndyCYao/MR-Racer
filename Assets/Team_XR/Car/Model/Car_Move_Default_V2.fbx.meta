@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: 1cb7d4ce5a36048059b05d27f4a57a50
+timeCreated: 1531956215
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: basic_rig Footsteps
+    100002: basic_rig Head
+    100004: Bip001 HeadNub
+    100006: Bip001 L Finger0Nub
+    100008: Bip001 L Finger1Nub
+    100010: Bip001 L Finger2Nub
+    100012: Bip001 R Finger0Nub
+    100014: Bip001 R Finger1Nub
+    100016: Bip001 R Finger2Nub
+    100018: Calf_L
+    100020: Calf_R
+    100022: Car_Body
+    100024: Car_Controller
+    100026: //RootNode
+    100028: Clavicle_L
+    100030: Clavicle_R
+    100032: Con_Car_Main
+    100034: Con_Man_Main
+    100036: Con_wheel_back_1
+    100038: Con_wheel_back_2
+    100040: Con_wheel_front_1
+    100042: Con_wheel_front_2
+    100044: Finger0_L
+    100046: Finger0_R
+    100048: Finger1_L
+    100050: Finger1_R
+    100052: Finger2_L
+    100054: Finger2_R
+    100056: Foot_L
+    100058: Foot_R
+    100060: Forearm_L
+    100062: Forearm_R
+    100064: Hand_L
+    100066: Hand_R
+    100068: Man_Body
+    100070: Man_Rig
+    100072: Neck
+    100074: Nub
+    100076: Nub 1
+    100078: Pelvis
+    100080: Spine
+    100082: Spine_2
+    100084: Thigh_L
+    100086: Thigh_R
+    100088: Toe0_L
+    100090: Toe0_R
+    100092: UpperArm_L
+    100094: UpperArm_R
+    100096: wheel_back_1
+    100098: wheel_back_2
+    100100: wheel_front_1
+    100102: wheel_front_2
+    100104: wheels
+    400000: basic_rig Footsteps
+    400002: basic_rig Head
+    400004: Bip001 HeadNub
+    400006: Bip001 L Finger0Nub
+    400008: Bip001 L Finger1Nub
+    400010: Bip001 L Finger2Nub
+    400012: Bip001 R Finger0Nub
+    400014: Bip001 R Finger1Nub
+    400016: Bip001 R Finger2Nub
+    400018: Calf_L
+    400020: Calf_R
+    400022: Car_Body
+    400024: Car_Controller
+    400026: //RootNode
+    400028: Clavicle_L
+    400030: Clavicle_R
+    400032: Con_Car_Main
+    400034: Con_Man_Main
+    400036: Con_wheel_back_1
+    400038: Con_wheel_back_2
+    400040: Con_wheel_front_1
+    400042: Con_wheel_front_2
+    400044: Finger0_L
+    400046: Finger0_R
+    400048: Finger1_L
+    400050: Finger1_R
+    400052: Finger2_L
+    400054: Finger2_R
+    400056: Foot_L
+    400058: Foot_R
+    400060: Forearm_L
+    400062: Forearm_R
+    400064: Hand_L
+    400066: Hand_R
+    400068: Man_Body
+    400070: Man_Rig
+    400072: Neck
+    400074: Nub
+    400076: Nub 1
+    400078: Pelvis
+    400080: Spine
+    400082: Spine_2
+    400084: Thigh_L
+    400086: Thigh_R
+    400088: Toe0_L
+    400090: Toe0_R
+    400092: UpperArm_L
+    400094: UpperArm_R
+    400096: wheel_back_1
+    400098: wheel_back_2
+    400100: wheel_front_1
+    400102: wheel_front_2
+    400104: wheels
+    2100000: Body
+    2100002: Face
+    2100004: car
+    2100006: phong2
+    2300000: Car_Body
+    2300002: Man_Body
+    2300004: wheel_back_1
+    2300006: wheel_back_2
+    2300008: wheel_front_1
+    2300010: wheel_front_2
+    3300000: Car_Body
+    3300002: Man_Body
+    3300004: wheel_back_1
+    3300006: wheel_back_2
+    3300008: wheel_front_1
+    3300010: wheel_front_2
+    4300000: Man_Body
+    4300002: Car_Body
+    4300004: wheel_front_1
+    4300006: wheel_front_2
+    4300008: wheel_back_1
+    4300010: wheel_back_2
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 3f51f1e9a6aa74c558157268940c5d35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face
+    second: {fileID: 2100000, guid: cf57fad82e8904494bf166160b5b1ad3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: car
+    second: {fileID: 2100000, guid: 25b784d3dfc43429ea6b8459c97db4bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong2
+    second: {fileID: 2100000, guid: 3620ef581aa1c4aa897e6173d933679d, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RedSportCarTexture
+    second: {fileID: 2800000, guid: cc40fe15864464df48b282cc68841afb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: free_male_1_body_diffuse
+    second: {fileID: 2800000, guid: 3177efa61624d4639a1296b65a3ef77a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: free_male_1_head_diffuse
+    second: {fileID: 2800000, guid: 3be250a595f8745708ae83a9f9ff5ff2, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
