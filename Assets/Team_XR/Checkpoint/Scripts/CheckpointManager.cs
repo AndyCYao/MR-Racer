@@ -41,7 +41,7 @@ public class CheckpointManager : MonoBehaviour
 
 	private void Start()
 	{
-        Reset();
+        BEScene.OnEnvironmentMeshCreated += Reset;
 	}
 
 	// Update is called once per frame
@@ -58,14 +58,14 @@ public class CheckpointManager : MonoBehaviour
         
         bool hasCreated = false;
         while(!hasCreated){
-            ray.direction = Random.insideUnitSphere;
+            ray.direction = new Vector3(Random.value, -Random.value, Random.value);
             if(Physics.Raycast(ray, out hit) && 
-            hit.transform.gameObject.layer == 8)
+               hit.transform.gameObject.layer == 8)
             {
                 Debug.Log("hit x\t" + hit.point.x + " hit y\t" + hit.point.y +
                         " hit z\t" + hit.point.z);
                 
-                if(Vector3.Angle (hit.normal, Vector3.up) < 10f)    // .2 on y is considered floor height
+                if(Vector3.Angle (hit.normal, Vector3.up) < 10f && hit.position.y < .2f)    // .2 on y is considered floor height
                 {
                     checkpoints.Add (
                         Instantiate(checkpointPrefab, hit.point, Quaternion.identity)

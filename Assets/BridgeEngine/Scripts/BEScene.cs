@@ -16,18 +16,26 @@ using UnityEditor;
 using BEDummyGoogleVR;
 namespace BEDummyGoogleVR {}
 
-public class BEScene : MonoBehaviour {
-	/// Top level BridgeEngineScene GameObject in scene
+public class BEScene : MonoBehaviour
+{
+    /// Top level BridgeEngineScene GameObject in scene
     public static string gameObjectName = "@BridgeEngineScene";
 
     /// Check if @BridgeEngineScene is present in the current Scene
-    public static bool IsInScene() {
+    public static bool IsInScene()
+    {
         return FindBEScene() != null;
     }
 
-    public static BEScene FindBEScene() {
+    public static BEScene FindBEScene()
+    {
         return GameObject.FindObjectOfType<BEScene>();
     }
+
+
+
+    public delegate void EnvironmentMeshCreatedDelegate();
+    public static event EnvironmentMeshCreatedDelegate OnEnvironmentMeshCreated;
 
     /**
      * Choose the material rendering style.
@@ -44,6 +52,7 @@ public class BEScene : MonoBehaviour {
         gameObject.layer = LayerMask.NameToLayer ("Platform"); // 8 is Platform Layer
 
         ApplyCorrectMaterialAndLayerSetting();
+        OnEnvironmentMeshCreated();
     }
 
     void Update() {
