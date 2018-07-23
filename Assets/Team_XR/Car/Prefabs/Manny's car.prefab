@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 146909015818403078}
   m_Layer: 0
   m_Name: WheelFL
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 146170797204118340}
   m_Layer: 0
   m_Name: WheelFR
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -960,9 +960,10 @@ GameObject:
   - component: {fileID: 4906425777239688}
   - component: {fileID: 33470473478336112}
   - component: {fileID: 23314252838302152}
+  - component: {fileID: 65467240392559636}
   m_Layer: 0
   m_Name: Car_Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -993,7 +994,7 @@ GameObject:
   - component: {fileID: 146405916158538998}
   m_Layer: 0
   m_Name: WheelBR
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1313,7 +1314,7 @@ GameObject:
   - component: {fileID: 146494563667164254}
   m_Layer: 0
   m_Name: WheelBL
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3254,6 +3255,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!65 &65467240392559636
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1532856858077294}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.336394, y: 0.42007542, z: 2.1814373}
+  m_Center: {x: -0.067991585, y: 0.3093912, z: 0.24042273}
 --- !u!95 &95850578191332698
 Animator:
   serializedVersion: 3
