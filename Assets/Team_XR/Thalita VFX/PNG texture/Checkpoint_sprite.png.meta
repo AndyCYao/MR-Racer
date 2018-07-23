@@ -1,0 +1,1975 @@
+fileFormatVersion: 2
+guid: 567117387db564891898646959dde244
+timeCreated: 1532030562
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Checkpoint_sprite_0
+    21300002: Checkpoint_sprite_1
+    21300004: Checkpoint_sprite_2
+    21300006: Checkpoint_sprite_3
+    21300008: Checkpoint_sprite_4
+    21300010: Checkpoint_sprite_5
+    21300012: Checkpoint_sprite_6
+    21300014: Checkpoint_sprite_7
+    21300016: Checkpoint_sprite_8
+    21300018: Checkpoint_sprite_9
+    21300020: Checkpoint_sprite_10
+    21300022: Checkpoint_sprite_11
+    21300024: Checkpoint_sprite_12
+    21300026: Checkpoint_sprite_13
+    21300028: Checkpoint_sprite_14
+    21300030: Checkpoint_sprite_15
+    21300032: Checkpoint_sprite_16
+    21300034: Checkpoint_sprite_17
+    21300036: Checkpoint_sprite_18
+    21300038: Checkpoint_sprite_19
+    21300040: Checkpoint_sprite_20
+    21300042: Checkpoint_sprite_21
+    21300044: Checkpoint_sprite_22
+    21300046: Checkpoint_sprite_23
+    21300048: Checkpoint_sprite_24
+    21300050: Checkpoint_sprite_25
+    21300052: Checkpoint_sprite_26
+    21300054: Checkpoint_sprite_27
+    21300056: Checkpoint_sprite_28
+    21300058: Checkpoint_sprite_29
+    21300060: Checkpoint_sprite_30
+    21300062: Checkpoint_sprite_31
+    21300064: Checkpoint_sprite_32
+    21300066: Checkpoint_sprite_33
+    21300068: Checkpoint_sprite_34
+    21300070: Checkpoint_sprite_35
+    21300072: Checkpoint_sprite_36
+    21300074: Checkpoint_sprite_37
+    21300076: Checkpoint_sprite_38
+    21300078: Checkpoint_sprite_39
+    21300080: Checkpoint_sprite_40
+    21300082: Checkpoint_sprite_41
+    21300084: Checkpoint_sprite_42
+    21300086: Checkpoint_sprite_43
+    21300088: Checkpoint_sprite_44
+    21300090: Checkpoint_sprite_45
+    21300092: Checkpoint_sprite_46
+    21300094: Checkpoint_sprite_47
+    21300096: Checkpoint_sprite_48
+    21300098: Checkpoint_sprite_49
+    21300100: Checkpoint_sprite_50
+    21300102: Checkpoint_sprite_51
+    21300104: Checkpoint_sprite_52
+    21300106: Checkpoint_sprite_53
+    21300108: Checkpoint_sprite_54
+    21300110: Checkpoint_sprite_55
+    21300112: Checkpoint_sprite_56
+    21300114: Checkpoint_sprite_57
+    21300116: Checkpoint_sprite_58
+    21300118: Checkpoint_sprite_59
+    21300120: Checkpoint_sprite_60
+    21300122: Checkpoint_sprite_61
+    21300124: Checkpoint_sprite_62
+    21300126: Checkpoint_sprite_63
+    21300128: Checkpoint_sprite_64
+    21300130: Checkpoint_sprite_65
+    21300132: Checkpoint_sprite_66
+    21300134: Checkpoint_sprite_67
+    21300136: Checkpoint_sprite_68
+    21300138: Checkpoint_sprite_69
+    21300140: Checkpoint_sprite_70
+    21300142: Checkpoint_sprite_71
+    21300144: Checkpoint_sprite_72
+    21300146: Checkpoint_sprite_73
+    21300148: Checkpoint_sprite_74
+    21300150: Checkpoint_sprite_75
+    21300152: Checkpoint_sprite_76
+    21300154: Checkpoint_sprite_77
+    21300156: Checkpoint_sprite_78
+    21300158: Checkpoint_sprite_79
+    21300160: Checkpoint_sprite_80
+    21300162: Checkpoint_sprite_81
+    21300164: Checkpoint_sprite_82
+    21300166: Checkpoint_sprite_83
+    21300168: Checkpoint_sprite_84
+    21300170: Checkpoint_sprite_85
+    21300172: Checkpoint_sprite_86
+    21300174: Checkpoint_sprite_87
+    21300176: Checkpoint_sprite_88
+    21300178: Checkpoint_sprite_89
+    21300180: Checkpoint_sprite_90
+    21300182: Checkpoint_sprite_91
+    21300184: Checkpoint_sprite_92
+    21300186: Checkpoint_sprite_93
+    21300188: Checkpoint_sprite_94
+    21300190: Checkpoint_sprite_95
+    21300192: Checkpoint_sprite_96
+    21300194: Checkpoint_sprite_97
+    21300196: Checkpoint_sprite_98
+    21300198: Checkpoint_sprite_99
+    21300200: Checkpoint_sprite_100
+    21300202: Checkpoint_sprite_101
+    21300204: Checkpoint_sprite_102
+    21300206: Checkpoint_sprite_103
+    21300208: Checkpoint_sprite_104
+    21300210: Checkpoint_sprite_105
+    21300212: Checkpoint_sprite_106
+    21300214: Checkpoint_sprite_107
+    21300216: Checkpoint_sprite_108
+    21300218: Checkpoint_sprite_109
+    21300220: Checkpoint_sprite_110
+    21300222: Checkpoint_sprite_111
+    21300224: Checkpoint_sprite_112
+    21300226: Checkpoint_sprite_113
+    21300228: Checkpoint_sprite_114
+    21300230: Checkpoint_sprite_115
+    21300232: Checkpoint_sprite_116
+    21300234: Checkpoint_sprite_117
+    21300236: Checkpoint_sprite_118
+    21300238: Checkpoint_sprite_119
+    21300240: Checkpoint_sprite_120
+    21300242: Checkpoint_sprite_121
+    21300244: Checkpoint_sprite_122
+    21300246: Checkpoint_sprite_123
+    21300248: Checkpoint_sprite_124
+    21300250: Checkpoint_sprite_125
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Checkpoint_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 727.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_18
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_20
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_22
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_24
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_25
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_26
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_27
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 637.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_29
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_30
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_31
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_32
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_33
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_34
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_35
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_36
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_37
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_38
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_39
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_40
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_41
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 547.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_43
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_44
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_45
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_46
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_47
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_48
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_49
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_50
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_51
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_52
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_53
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_54
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_55
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 457.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_57
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_58
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_59
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_60
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_61
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_62
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_63
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_64
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_65
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_66
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_67
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_68
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_69
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 367.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_71
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_72
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_73
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_74
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_75
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_76
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_77
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_78
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_79
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_80
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_81
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_82
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_83
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 277.1111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_85
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_86
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_87
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_88
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_89
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_90
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_91
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_92
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_93
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_94
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_95
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_96
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_97
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 187.11111
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_99
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_100
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_101
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_102
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_103
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_104
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_105
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_106
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_107
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_108
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_109
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_110
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_111
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 97.111115
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_113
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_114
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_115
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_116
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_117
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_118
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_119
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_120
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_121
+      rect:
+        serializedVersion: 2
+        x: 7290
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_122
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_123
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_124
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Checkpoint_sprite_125
+      rect:
+        serializedVersion: 2
+        x: 10530
+        y: 7.1111145
+        width: 810.9286
+        height: 90.888885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
