@@ -16,12 +16,11 @@ public class Checkpoint : MonoBehaviour {
             isHit = true;
 
             CheckpointPassedEvent(index);
-
-            SetActive(false);
+            KillItSelf(false);
         }
 	}
 
-    public void SetActive (bool isActive) {
+    public void KillItSelf (bool isActive) {
 
         if (isActive ){
             StartCoroutine (Activate());
@@ -33,12 +32,12 @@ public class Checkpoint : MonoBehaviour {
 
     IEnumerator Activate () {
         yield return new WaitForSeconds(0.5f);
-        SetActive(true);
+        gameObject.SetActive(true);
     }
 
     IEnumerator Deactivate()
     {
-        yield return new WaitForSeconds(1.5f);
-        SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        gameObject.SetActive(false);
     }
 }
