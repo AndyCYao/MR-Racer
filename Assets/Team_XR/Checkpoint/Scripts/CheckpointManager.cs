@@ -22,6 +22,7 @@ public class CheckpointManager : MonoBehaviour
         //rayCastPoint = transform.position + transform.up * 2;
         //   int numOfCheckpointsLeft = numberOfCheckpoints;
         checkpoints = new List<GameObject>();
+        BEScene.OnEnvironmentMeshCreated += Reset;
     }
 
 	private void Reset()
@@ -41,7 +42,7 @@ public class CheckpointManager : MonoBehaviour
 
 	private void Start()
 	{
-        BEScene.OnEnvironmentMeshCreated += Reset;
+        
 	}
 
 	// Update is called once per frame
@@ -65,7 +66,7 @@ public class CheckpointManager : MonoBehaviour
                 Debug.Log("hit x\t" + hit.point.x + " hit y\t" + hit.point.y +
                         " hit z\t" + hit.point.z);
                 
-                if(Vector3.Angle (hit.normal, Vector3.up) < 10f && hit.position.y < .2f)    // .2 on y is considered floor height
+                if(Vector3.Angle (hit.normal, Vector3.up) < 10f && hit.point.y < .2f)    // .2 on y is considered floor height
                 {
                     checkpoints.Add (
                         Instantiate(checkpointPrefab, hit.point, Quaternion.identity)
