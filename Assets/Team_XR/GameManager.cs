@@ -3,15 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     public float currCountdownValue = 0f;
     private float startTime;
     public Text countDown;
 
+    public GameObject player;
+
+    private static GameManager s_GameManager;
+
+    public static GameManager Instance {
+        get
+        {
+            return s_GameManager;
+        }
+    }
+
 	private void Awake()
 	{
+        if (!s_GameManager)
+        {
+            s_GameManager = this;
+        }
+        else{
+            Destroy(this);
+        }
+
         CheckpointManager.NewCheckpointCreatedEvent += AddMoreTime;
+        player = GameObject.FindObjectOfType<CarController>().gameObject;
 	}
 
 	// Use this for initialization

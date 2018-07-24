@@ -220,7 +220,7 @@ public class CarController : MonoBehaviour
         }
 #endif
 
-        Debug.Log(GetWheelCollider(WheelPosition.RearLeft).motorTorque);
+        //Debug.Log(GetWheelCollider(WheelPosition.RearLeft).motorTorque);
 
         if (Input.GetKey(KeyCode.Space))
         {
@@ -229,7 +229,7 @@ public class CarController : MonoBehaviour
         }
 
 
-        Debug.LogFormat("Vertical {0}", Input.GetAxis("Vertical").Equals(0f));
+        //Debug.LogFormat("Vertical {0}", Input.GetAxis("Vertical").Equals(0f));
         // Debug.LogFormat("Brake ", GetWheelCollider(WheelPosition.RearLeft).brakeTorque);
     }
 

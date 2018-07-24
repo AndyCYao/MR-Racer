@@ -33,7 +33,7 @@ public class CheckpointManager : MonoBehaviour
         BEScene.OnEnvironmentMeshCreated += Reset;
        
         checkPointObject = transform.Find("Checkpoint");
-        player = GameObject.Find("Player");
+        player = GameManager.Instance.player;
     }
 
 	private void Reset()

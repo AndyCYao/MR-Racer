@@ -1009,17 +1009,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 4052832661809544, guid: 4b232bf6eea754daea16abe75610ab90, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4052832661809544, guid: 4b232bf6eea754daea16abe75610ab90, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4052832661809544, guid: 4b232bf6eea754daea16abe75610ab90, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.1
+    - target: {fileID: 1398394591050704, guid: 4b232bf6eea754daea16abe75610ab90, type: 2}
+      propertyPath: m_Name
+      value: MannysCar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b232bf6eea754daea16abe75610ab90, type: 2}
@@ -1105,6 +1097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currCountdownValue: 40
   countDown: {fileID: 1581462371}
+  player: {fileID: 0}
 --- !u!4 &1489795164
 Transform:
   m_ObjectHideFlags: 0
