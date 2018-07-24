@@ -8,6 +8,7 @@ public class CheckpointManager : MonoBehaviour
 
    // public GameObject plane;
  //   public GameObject checkpointPrefab;
+    [SerializeField]
     GameObject player;
 
     //public int numberOfCheckpoints;
@@ -26,8 +27,9 @@ public class CheckpointManager : MonoBehaviour
         //   int numOfCheckpointsLeft = numberOfCheckpoints;
        // checkpoints = new List<GameObject>();
         BEScene.OnEnvironmentMeshCreated += Reset;
+       
         checkPointObject = transform.Find("Checkpoint");
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.Find("Player");
     }
 
 	private void Reset()
@@ -35,11 +37,51 @@ public class CheckpointManager : MonoBehaviour
       //  remainingCheckPoints = 0;
 
         Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
-
-        player.transform.position = RayCastCheckpoint() + Vector3.up * 2f;
+        BridgeEngineUnity.main.onControllerButtonEvent.AddListener(OnControllerButton);
+        SpawnPlayerRandomly();
         checkPointObject.transform.position = RayCastCheckpoint();
 
 	}
+
+    [SerializeField]
+    float confirmTime = -1;
+    private void OnControllerButton(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up) { 
+        
+
+        if (current == (BEControllerButtons.ButtonPrimary | BEControllerButtons.ButtonSecondary)) {
+
+            if ((down == BEControllerButtons.ButtonPrimary || down == BEControllerButtons.ButtonSecondary)
+            && Mathf.Approximately(confirmTime, -1))
+            {
+                Debug.Log("CheckpointManager - OnControllerButton: Reset button sequence being pressed!");
+                confirmTime = 0;
+            }
+
+            else
+            {
+               
+
+
+                    confirmTime += Time.deltaTime;
+                
+            }
+        }
+
+        if (up == BEControllerButtons.ButtonPrimary || up == BEControllerButtons.ButtonSecondary) {
+            
+            if (confirmTime > 1)
+            {
+                Debug.Log(string.Format("CheckpointManager - OnControllerButton: Reset Vehicle!"));
+                SpawnPlayerRandomly();
+               
+            }
+            confirmTime = -1;
+        }
+    }
+
+    private void SpawnPlayerRandomly () {
+        player.transform.position = RayCastCheckpoint() + Vector3.up * .3f;
+    }
 
 
     private Vector3 RayCastCheckpoint()

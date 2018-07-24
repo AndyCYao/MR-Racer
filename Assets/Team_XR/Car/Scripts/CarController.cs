@@ -114,10 +114,7 @@ public class CarController : MonoBehaviour
         m_WheelColliders = m_WheelParent.GetComponentsInChildren<WheelCollider>();
 
 
-        if (m_CentreOfMass)
-        {
-            //  m_RigidBody.centerOfMass = m_CentreOfMass.localPosition;
-        }
+       
 
         m_CarControlInput = new CarControlInput();
 
@@ -205,7 +202,11 @@ public class CarController : MonoBehaviour
     {
 
 
-        GetWheelCollider(WheelPosition.RearLeft).motorTorque = GetWheelCollider(WheelPosition.RearRight).motorTorque = m_CarControlInput.motorTorque;
+        GetWheelCollider(WheelPosition.RearLeft).motorTorque = 
+            GetWheelCollider(WheelPosition.RearRight).motorTorque = 
+            GetWheelCollider(WheelPosition.FrontLeft).motorTorque = 
+            GetWheelCollider(WheelPosition.FrontRight).motorTorque = m_CarControlInput.motorTorque;
+        
         GetWheelCollider(WheelPosition.FrontLeft).steerAngle = GetWheelCollider(WheelPosition.FrontRight).steerAngle = m_CarControlInput.steerAngle;
 
 #if UNITY_EDITOR
