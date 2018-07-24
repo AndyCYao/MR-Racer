@@ -13,31 +13,26 @@ public class Checkpoint : MonoBehaviour {
 	{
         if (other.CompareTag("Player") && !isHit )
         {
-            isHit = true;
+           // isHit = true;
 
             CheckpointPassedEvent(index);
-            KillItSelf(false);
+            //KillItSelf();
         }
 	}
 
-    public void KillItSelf (bool isActive) {
-
-        if (isActive ){
-            StartCoroutine (Activate());
-        }
-        else {
+    public void KillItSelf () {
+     
             StartCoroutine (Deactivate());
-        }
+
     }
 
-    IEnumerator Activate () {
-        yield return new WaitForSeconds(0.5f);
-        gameObject.SetActive(true);
+    void OnEnable () {
+        isHit = false;
     }
 
     IEnumerator Deactivate()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         gameObject.SetActive(false);
     }
 }
