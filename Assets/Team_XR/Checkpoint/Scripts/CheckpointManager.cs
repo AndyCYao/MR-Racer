@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CheckpointManager : MonoBehaviour
 {
 
@@ -18,6 +19,9 @@ public class CheckpointManager : MonoBehaviour
     [SerializeField]
     int currentCheckPoints = 0;
     Transform checkPointObject;
+
+    public delegate void NewCheckpointCreated(Vector3 newCheckpointPos);
+    public static event NewCheckpointCreated NewCheckpointCreatedEvent;
 
     private void Awake()
     {
@@ -41,7 +45,7 @@ public class CheckpointManager : MonoBehaviour
 
 	}
 
-
+    // Returns a vector where ray cast is hit. 
     private Vector3 RayCastCheckpoint()
     {
         RaycastHit hit;
@@ -73,11 +77,12 @@ public class CheckpointManager : MonoBehaviour
         }
     }
 
-    void OnCheckpointReached (int index) {
+    void OnCheckpointReached (int index) 
+    {
         Debug.Log(string.Format("CheckpointManager - OnCheckpointReached: {0}", index));
         checkPointObject.transform.position = RayCastCheckpoint();
+        NewCheckpointCreatedEvent(checkPointObject.transform.position);
         currentCheckPoints++;
         Debug.Log(string.Format("New checkpoint spawned at {0}", checkPointObject.transform.position.ToString()));
-
     }
 }
