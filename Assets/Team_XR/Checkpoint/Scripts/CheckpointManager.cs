@@ -80,7 +80,7 @@ public class CheckpointManager : MonoBehaviour
     }
 
     private void SpawnPlayerRandomly () {
-        player.transform.position = RayCastCheckpoint() + Vector3.up * .3f;
+        player.transform.position = RayCastCheckpoint() + Vector3.up * .1f;
     }
 
 
