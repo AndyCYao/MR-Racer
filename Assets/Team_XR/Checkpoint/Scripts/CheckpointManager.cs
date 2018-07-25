@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct CheckpointEventData
+{
+    public Vector3 newLocation;
+    public int numberOfCheckpoints;
+}
 
 public class CheckpointManager : MonoBehaviour
 {
@@ -21,7 +26,7 @@ public class CheckpointManager : MonoBehaviour
     int currentCheckPoints = 0;
     Transform checkPointObject;
 
-    public delegate void NewCheckpointCreated(Vector3 newCheckpointPos);
+    public delegate void NewCheckpointCreated(CheckpointEventData data);
     public static event NewCheckpointCreated NewCheckpointCreatedEvent;
 
     private void Awake()
@@ -38,8 +43,6 @@ public class CheckpointManager : MonoBehaviour
 
 	private void Reset()
 	{
-      //  remainingCheckPoints = 0;
-
         Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
         BridgeEngineUnity.main.onControllerButtonEvent.AddListener(OnControllerButton);
         SpawnPlayerRandomly();
@@ -123,8 +126,14 @@ public class CheckpointManager : MonoBehaviour
     {
         Debug.Log(string.Format("CheckpointManager - OnCheckpointReached: {0}", index));
         checkPointObject.transform.position = RayCastCheckpoint();
-        NewCheckpointCreatedEvent(checkPointObject.transform.position);
         currentCheckPoints++;
+        CheckpointEventData payload = new CheckpointEventData
+        {
+            newLocation = checkPointObject.transform.position,
+            numberOfCheckpoints = currentCheckPoints
+        };
+        NewCheckpointCreatedEvent(payload);
+
         Debug.Log(string.Format("New checkpoint spawned at {0}", checkPointObject.transform.position.ToString()));
     }
 }

@@ -42,17 +42,14 @@ public class GameManager : MonoBehaviour
         startTime = Time.time;
 	}
 	
-	// Update is called once per frame
-	void Update () 
-    {
-
-	}
 
     // This method can be improve to have dynamic addtional time
     // base on the distance between the car and the new checkpoint
-    private void AddMoreTime(Vector3 newCheckPointLocation)
+    private void AddMoreTime(CheckpointEventData data)
     {
-        currCountdownValue += 10f;
+        // Base Time  +  (10/#checkpoint);
+        float BaseTime = 10f;
+        currCountdownValue += BaseTime + (10 / data.numberOfCheckpoints);
     }
 
     private IEnumerator CountDown()
