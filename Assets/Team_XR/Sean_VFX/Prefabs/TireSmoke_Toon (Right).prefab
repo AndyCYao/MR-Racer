@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1577014165250418
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,7 +68,7 @@ Transform:
   m_GameObject: {fileID: 1133515043077336}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 4843754031176420}
   m_RootOrder: 0
@@ -81,7 +81,7 @@ Transform:
   m_GameObject: {fileID: 1577014165250418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 4843754031176420}
   m_Father: {fileID: 0}
@@ -93,14 +93,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786093505350396}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.867141, y: 2.860743, z: 13.28151}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.0000000037252899, y: -0.6875851, z: -0.0000000018626449,
+    w: 0.72610384}
+  m_LocalPosition: {x: -6.2, y: 2.9, z: -11.5}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 4721509929846384}
   m_Father: {fileID: 4784967693786370}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -86.878006, z: 0}
 --- !u!198 &198305685180650264
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -161,7 +162,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -390849011
+  randomSeed: -2087943017
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3478,7 +3479,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -744101912
+  randomSeed: -924151294
   InitialModule:
     serializedVersion: 3
     enabled: 1

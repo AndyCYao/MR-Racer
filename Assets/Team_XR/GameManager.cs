@@ -49,7 +49,10 @@ public class GameManager : MonoBehaviour
     {
         // Base Time  +  (10/#checkpoint);
         float BaseTime = 10f;
-        currCountdownValue += BaseTime + (10 / data.numberOfCheckpoints);
+        //float distanceBetweenCarAndCP = Vector3.Distance(player.transform.position, 
+                                                         //data.newLocation);
+        
+        currCountdownValue += BaseTime + (10 / data.numberOfCheckpoints) ;
     }
 
     private IEnumerator CountDown()
