@@ -1,0 +1,460 @@
+fileFormatVersion: 2
+guid: f1a8cec83ab834c148ec10fecf0d4215
+timeCreated: 1532467304
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: vrrr_text_0
+    21300002: vrrr_text_1
+    21300004: vrrr_text_2
+    21300006: vrrr_text_3
+    21300008: vrrr_text_4
+    21300010: vrrr_text_5
+    21300012: vrrr_text_6
+    21300014: vrrr_text_7
+    21300016: vrrr_text_8
+    21300018: vrrr_text_9
+    21300020: vrrr_text_10
+    21300022: vrrr_text_11
+    21300024: vrrr_text_12
+    21300026: vrrr_text_13
+    21300028: vrrr_text_14
+    21300030: vrrr_text_15
+    21300032: vrrr_text_16
+    21300034: vrrr_text_17
+    21300036: vrrr_text_18
+    21300038: vrrr_text_19
+    21300040: vrrr_text_20
+    21300042: vrrr_text_21
+    21300044: vrrr_text_22
+    21300046: vrrr_text_23
+    21300048: vrrr_text_24
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vrrr_text_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9575.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9177.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8779.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8381.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7983.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7585.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7187.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6789.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6391.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5993.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5595.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5197.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4799.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4401.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4003.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3605.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3207.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2809.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2411.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2013.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1615.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1217.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 819.04004
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 421.04
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vrrr_text_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23.040009
+        width: 944
+        height: 398.96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
