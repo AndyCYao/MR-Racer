@@ -38,7 +38,7 @@ public class CheckpointManager : MonoBehaviour
         BEScene.OnEnvironmentMeshCreated += Reset;
        
         checkPointObject = transform.Find("Checkpoint");
-        player = GameManager.Instance.player;
+        //player = GameManager.Instance.player;
     }
 
 	private void Reset()
@@ -87,7 +87,7 @@ public class CheckpointManager : MonoBehaviour
     }
 
     private void SpawnPlayerRandomly () {
-        player.transform.position = RayCastCheckpoint() + Vector3.up * .1f;
+        GameManager.Instance.player.transform.position = RayCastCheckpoint() + Vector3.up * .1f;
     }
 
 
