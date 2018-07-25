@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: a11424d76cb684a4ab9e7f1ee8921604
+timeCreated: 1532457603
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: crack_text_0
+    21300002: crack_text_1
+    21300004: crack_text_2
+    21300006: crack_text_3
+    21300008: crack_text_4
+    21300010: crack_text_5
+    21300012: crack_text_6
+    21300014: crack_text_7
+    21300016: crack_text_8
+    21300018: crack_text_9
+    21300020: crack_text_10
+    21300022: crack_text_11
+    21300024: crack_text_12
+    21300026: crack_text_13
+    21300028: crack_text_14
+    21300030: crack_text_15
+    21300032: crack_text_16
+    21300034: crack_text_17
+    21300036: crack_text_18
+    21300038: crack_text_19
+    21300040: crack_text_20
+    21300042: crack_text_21
+    21300044: crack_text_22
+    21300046: crack_text_23
+    21300048: crack_text_24
+    21300050: crack_text_25
+    21300052: crack_text_26
+    21300054: crack_text_27
+    21300056: crack_text_28
+    21300058: crack_text_29
+    21300060: crack_text_30
+    21300062: crack_text_31
+    21300064: crack_text_32
+    21300066: crack_text_33
+    21300068: crack_text_34
+    21300070: crack_text_35
+    21300072: crack_text_36
+    21300074: crack_text_37
+    21300076: crack_text_38
+    21300078: crack_text_39
+    21300080: crack_text_40
+    21300082: crack_text_41
+    21300084: crack_text_42
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crack_text_0
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 9249.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_1
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 9249.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_2
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 9249.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8325.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_4
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 8325.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_5
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 8325.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_6
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 8325.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7401.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_8
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 7401.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_9
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 7401.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_10
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 7401.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6477.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_12
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 6477.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_13
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 6477.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_14
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 6477.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5553.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_16
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 5553.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_17
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 5553.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_18
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 5553.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4629.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_20
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 4629.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_21
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 4629.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_22
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 4629.091
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3705.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_24
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 3705.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_25
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 3705.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_26
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 3705.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2781.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_28
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 2781.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_29
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 2781.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_30
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 2781.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1857.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_32
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 1857.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_33
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 1857.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_34
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 1857.0908
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 933.0909
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_36
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 933.0909
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_37
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 933.0909
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_38
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 933.0909
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9.090881
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_40
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 9.090881
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_41
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 9.090881
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crack_text_42
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 9.090881
+        width: 2697.75
+        height: 924.9091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
