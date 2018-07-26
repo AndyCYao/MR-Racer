@@ -27,14 +27,14 @@ namespace BridgeEngine.Input
         //m_MaxSteerAngle;
 
         [Serializable]
-        class CarMotionData
+        protected class CarMotionData
         {
             public float motorTorque = 0;
             public float steerAngle = 0;
          //   public float brakeTorque = 0;
         }
         [SerializeField]
-        CarMotionData m_CarMotionData;
+        protected CarMotionData m_CarMotionData;
         private void Awake()
         {
             m_CarController = GetComponent<UnityStandardAssets.Vehicles.Car.CarController>();
@@ -54,24 +54,17 @@ namespace BridgeEngine.Input
         }
 
 
-
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        private void FixedUpdate()
+        public virtual void FixedUpdate()
         {
             // pass the input to the car!
             float h = m_CarMotionData.steerAngle / 360;
             float v = m_CarMotionData.motorTorque;
             //float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 
-#if !MOBILE_INPUT
-                                    float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-                                 //   m_CarController.Move(h, v, v, handbrake);
-#else
+            #if !MOBILE_INPUT
+                float handbrake = CrossPlatformInputManager.GetAxis("Jump");
+                 //   m_CarController.Move(h, v, v, handbrake);
+            #else
 
 
             Debug.Log("h " + h + " v " + v );
@@ -80,7 +73,7 @@ namespace BridgeEngine.Input
         }
 
 
-        void OnMotionEvent(Vector3 position, Quaternion orientation)
+        public virtual void OnMotionEvent(Vector3 position, Quaternion orientation)
         {
             #if ORIENTATIONROTATIONCONTROL
               
@@ -115,7 +108,7 @@ namespace BridgeEngine.Input
         /**
         * Primary Button interacts, placing and moving items on the ground, or picking up and throwing the ball.
         */
-        public void OnButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
+        public virtual void OnButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
 
         {
 
@@ -152,7 +145,7 @@ namespace BridgeEngine.Input
 
         }
 
-        void OnTouchEvent(Vector2 position, BEControllerTouchStatus touchStatus)
+        public virtual void OnTouchEvent(Vector2 position, BEControllerTouchStatus touchStatus)
         {
             if (touchStatus == BEControllerTouchStatus.TouchFirstContact || touchStatus == BEControllerTouchStatus.TouchMove)
             {
