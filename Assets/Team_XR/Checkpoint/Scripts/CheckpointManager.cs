@@ -80,10 +80,16 @@ public class CheckpointManager : MonoBehaviour
     }
 
     IEnumerator CheckButtonHold() {
-        while (confirmTime >= 0) {
+        
+        while (confirmTime >= 0 && confirmTime < 1) {
             confirmTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
+        if (!Mathf.Approximately(confirmTime, -1)){
+            confirmTime = -1;
+            SpawnPlayerRandomly();
+        }
+
     }
 
     private void SpawnPlayerRandomly()

@@ -12,7 +12,7 @@ namespace BridgeEngine.Input
 
 
 
-        public UnityStandardAssets.Vehicles.Car.CarController m_CarController;
+        UnityStandardAssets.Vehicles.Car.CarController m_CarController;
         BridgeEngineUnity beUnity;
         //[SerializeField]
         //float
@@ -64,7 +64,7 @@ namespace BridgeEngine.Input
         private void FixedUpdate()
         {
             // pass the input to the car!
-            float h = m_CarMotionData.steerAngle;
+            float h = m_CarMotionData.steerAngle / 360;
             float v = m_CarMotionData.motorTorque;
             //float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 
