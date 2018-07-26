@@ -1,25 +1,28 @@
 fileFormatVersion: 2
 guid: f9e4c378f2d8844269be8f3ee8913231
-timeCreated: 1523918316
-licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: CarvedSideTable
     100004: EnvironmentAmbientLight
     100006: robot_room
     100008: upaxis
+    100010: pasted__polySurface17
     400000: //RootNode
     400002: CarvedSideTable
     400004: EnvironmentAmbientLight
     400006: robot_room
     400008: upaxis
+    400010: pasted__polySurface17
     2100000: CarvedSideTable
     2100002: CarvedSideTable_ncl1_1
     2300000: CarvedSideTable
+    2300002: pasted__polySurface17
     3300000: CarvedSideTable
+    3300002: pasted__polySurface17
     4300000: CarvedSideTable
+    4300002: pasted__polySurface17
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -40,6 +43,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -71,6 +75,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

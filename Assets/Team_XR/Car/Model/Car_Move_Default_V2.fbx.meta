@@ -1,9 +1,7 @@
 fileFormatVersion: 2
 guid: 1cb7d4ce5a36048059b05d27f4a57a50
-timeCreated: 1531956215
-licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: basic_rig Footsteps
     100002: basic_rig Head
@@ -135,6 +133,7 @@ ModelImporter:
     4300010: wheel_back_2
     7400000: Take 001
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -189,6 +188,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -220,6 +220,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
