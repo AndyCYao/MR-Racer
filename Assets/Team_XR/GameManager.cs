@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
 
-        CheckpointManager.NewCheckpointCreatedEvent += AddMoreTime;
         player = GameObject.FindObjectOfType<CarController>().gameObject;
+        CheckpointManager.NewCheckpointCreatedEvent += AddMoreTime;
 	}
 
 	// Use this for initialization

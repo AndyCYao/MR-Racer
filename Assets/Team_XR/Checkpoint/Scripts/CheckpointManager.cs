@@ -12,16 +12,16 @@ public class CheckpointManager : MonoBehaviour
 {
 
 
-   // public GameObject plane;
- //   public GameObject checkpointPrefab;
+    // public GameObject plane;
+    //   public GameObject checkpointPrefab;
     [SerializeField]
     GameObject player;
 
     //public int numberOfCheckpoints;
 
- //   [SerializeField]
- //   List<GameObject> checkpoints;
-   // int remainingCheckPoints = 0;
+    //   [SerializeField]
+    //   List<GameObject> checkpoints;
+    // int remainingCheckPoints = 0;
     [SerializeField]
     int currentCheckPoints = 0;
     Transform checkPointObject;
@@ -62,16 +62,10 @@ public class CheckpointManager : MonoBehaviour
             {
                 Debug.Log("CheckpointManager - OnControllerButton: Reset button sequence being pressed!");
                 confirmTime = 0;
+                StartCoroutine(CheckButtonHold());
             }
 
-            else
-            {
-               
 
-
-                    confirmTime += Time.deltaTime;
-                
-            }
         }
 
         if (up == BEControllerButtons.ButtonPrimary || up == BEControllerButtons.ButtonSecondary) {
@@ -80,13 +74,20 @@ public class CheckpointManager : MonoBehaviour
             {
                 Debug.Log(string.Format("CheckpointManager - OnControllerButton: Reset Vehicle!"));
                 SpawnPlayerRandomly();
-               
             }
             confirmTime = -1;
         }
     }
 
-    private void SpawnPlayerRandomly () {
+    IEnumerator CheckButtonHold() {
+        while (confirmTime >= 0) {
+            confirmTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private void SpawnPlayerRandomly()
+    {
         GameManager.Instance.player.transform.position = RayCastCheckpoint() + Vector3.up * .1f;
     }
 
@@ -122,18 +123,10 @@ public class CheckpointManager : MonoBehaviour
         }
     }
 
-    void OnCheckpointReached (int index) 
-    {
+    void OnCheckpointReached (int index) {
         Debug.Log(string.Format("CheckpointManager - OnCheckpointReached: {0}", index));
         checkPointObject.transform.position = RayCastCheckpoint();
         currentCheckPoints++;
-        CheckpointEventData payload = new CheckpointEventData
-        {
-            newLocation = checkPointObject.transform.position,
-            numberOfCheckpoints = currentCheckPoints
-        };
-        NewCheckpointCreatedEvent(payload);
-
         Debug.Log(string.Format("New checkpoint spawned at {0}", checkPointObject.transform.position.ToString()));
     }
 }
