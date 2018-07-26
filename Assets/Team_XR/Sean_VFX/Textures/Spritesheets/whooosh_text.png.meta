@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 47d7206fc1c49410b8d5f5cc82a0d1c4
+timeCreated: 1532545581
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: whooosh_text_0
+    21300002: whooosh_text_1
+    21300004: whooosh_text_2
+    21300006: whooosh_text_3
+    21300008: whooosh_text_4
+    21300010: whooosh_text_5
+    21300012: whooosh_text_6
+    21300014: whooosh_text_7
+    21300016: whooosh_text_8
+    21300018: whooosh_text_9
+    21300020: whooosh_text_10
+    21300022: whooosh_text_11
+    21300024: whooosh_text_12
+    21300026: whooosh_text_13
+    21300028: whooosh_text_14
+    21300030: whooosh_text_15
+    21300032: whooosh_text_16
+    21300034: whooosh_text_17
+    21300036: whooosh_text_18
+    21300038: whooosh_text_19
+    21300040: whooosh_text_20
+    21300042: whooosh_text_21
+    21300044: whooosh_text_22
+    21300046: whooosh_text_23
+    21300048: whooosh_text_24
+    21300050: whooosh_text_25
+    21300052: whooosh_text_26
+    21300054: whooosh_text_27
+    21300056: whooosh_text_28
+    21300058: whooosh_text_29
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: whooosh_text_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_1
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 2003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_2
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 2003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_3
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 2003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_4
+      rect:
+        serializedVersion: 2
+        x: 7552
+        y: 2003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_5
+      rect:
+        serializedVersion: 2
+        x: 9440
+        y: 2003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1503
+        width: 1889
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_7
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 1503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_8
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 1503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_9
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 1503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_10
+      rect:
+        serializedVersion: 2
+        x: 7552
+        y: 1503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_11
+      rect:
+        serializedVersion: 2
+        x: 9440
+        y: 1503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1003
+        width: 1889
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_13
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 1003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_14
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 1003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_15
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 1003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_16
+      rect:
+        serializedVersion: 2
+        x: 7552
+        y: 1003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_17
+      rect:
+        serializedVersion: 2
+        x: 9440
+        y: 1003.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_19
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_20
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_21
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_22
+      rect:
+        serializedVersion: 2
+        x: 7552
+        y: 503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_23
+      rect:
+        serializedVersion: 2
+        x: 9440
+        y: 503.2
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.2000122
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_25
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 3.2000122
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_26
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 3.2000122
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_27
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 3.2000122
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_28
+      rect:
+        serializedVersion: 2
+        x: 7552
+        y: 3.2000122
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: whooosh_text_29
+      rect:
+        serializedVersion: 2
+        x: 9440
+        y: 3.2000122
+        width: 1888.8334
+        height: 500.8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
