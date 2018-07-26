@@ -14,17 +14,17 @@ namespace BridgeEngine.Input
 
         public UnityStandardAssets.Vehicles.Car.CarController m_CarController;
         BridgeEngineUnity beUnity;
-        [SerializeField]
-        float
+        //[SerializeField]
+        //float
         /// <summary>
         /// max motor force.
         /// </summary>
-        m_MaxMotorForce,
+        //m_MaxMotorForce,
 
         /// <summary>
         /// The max steer force.
         /// </summary>
-        m_MaxSteerAngle;
+        //m_MaxSteerAngle;
 
         [Serializable]
         class CarMotionData
@@ -64,20 +64,18 @@ namespace BridgeEngine.Input
         private void FixedUpdate()
         {
             // pass the input to the car!
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
+            float h = m_CarMotionData.steerAngle;
+            float v = m_CarMotionData.motorTorque;
+            //float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 
 #if !MOBILE_INPUT
                                     float handbrake = CrossPlatformInputManager.GetAxis("Jump");
                                  //   m_CarController.Move(h, v, v, handbrake);
 #else
 
-            Debug.Log("Yeah " + h);
-            m_CarController.Move(
-                Mathf.Max (m_CarMotionData.steerAngle, h), 
-                Mathf.Max (m_CarMotionData.motorTorque,v),
-                0,//Mathf.Max (m_CarMotionData.motorTorque,v),
-                0f);
+
+            Debug.Log("h " + h + " v " + v );
+            m_CarController.Move(h,v,v,0);
             #endif
         }
 
@@ -108,9 +106,8 @@ namespace BridgeEngine.Input
             // Vector3.SignedAngle(toRotation, fromRotation, transform.up);
 
 
-            m_CarMotionData.steerAngle = diffAngle;
-                /*(Mathf.Abs(diffAngle) > c_MinimumRotationMargin) ?
-                        Mathf.Clamp (diffAngle, -m_MaxSteerAngle, m_MaxSteerAngle) : 0;*/
+            m_CarMotionData.steerAngle = diffAngle *   
+                ((Mathf.Abs(diffAngle) > c_MinimumRotationMargin) ? 1 : 0);
                     
             #endif
         }
@@ -124,21 +121,21 @@ namespace BridgeEngine.Input
 
 
 
-            if (current == BEControllerButtons.ButtonPrimary || down == BEControllerButtons.ButtonPrimary)
-            {
-                if (m_CarMotionData.motorTorque < m_MaxMotorForce)
-                {
-                    Debug.Log("Primary held down");
-                    //m_CarMotionData.motorTorque = Mathf.Clamp(m_CarMotionData.motorTorque + m_MaxMotorForce * Time.deltaTime * 0.2f, 0, m_MaxMotorForce);
+            //if (current == BEControllerButtons.ButtonPrimary || down == BEControllerButtons.ButtonPrimary)
+            //{
+            //    if (m_CarMotionData.motorTorque < m_MaxMotorForce)
+            //    {
+            //        Debug.Log("Primary held down");
+            //        //m_CarMotionData.motorTorque = Mathf.Clamp(m_CarMotionData.motorTorque + m_MaxMotorForce * Time.deltaTime * 0.2f, 0, m_MaxMotorForce);
 
 
-                }
-                else
-                {
-                    Debug.Log("MotorTorque at maximum");
-                   // m_CarMotionData.motorTorque = m_MaxMotorForce;
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        Debug.Log("MotorTorque at maximum");
+            //       // m_CarMotionData.motorTorque = m_MaxMotorForce;
+            //    }
+            //}
 
             if (up == BEControllerButtons.ButtonPrimary)
             {
@@ -159,23 +156,22 @@ namespace BridgeEngine.Input
         {
             if (touchStatus == BEControllerTouchStatus.TouchFirstContact || touchStatus == BEControllerTouchStatus.TouchMove)
             {
-#if PADCONTROL || ORIENTATIONROTATIONCONTROL
-            m_CarMotionData.motorTorque = m_MaxMotorForce * position.y;
-#endif
+                #if PADCONTROL || ORIENTATIONROTATIONCONTROL
+                            m_CarMotionData.motorTorque = position.y;
+                #endif
 
-#if PADCONTROL || PADROTATIONTRIGGERACCELERATION
-            m_CarMotionData.steerAngle = m_MaxSteerAngle * position.x;
-#endif
-            }
+                #if PADCONTROL || PADROTATIONTRIGGERACCELERATION
+                            m_CarMotionData.steerAngle = m_MaxSteerAngle * position.x;
+                #endif
+                            }
 
-            if (touchStatus == BEControllerTouchStatus.TouchReleaseContact)
-            {
-                m_CarMotionData.steerAngle = 0;
+                            if (touchStatus == BEControllerTouchStatus.TouchReleaseContact)
+                            {
+                                m_CarMotionData.steerAngle = 0;
 
-#if PADCONTROL || ORIENTATIONROTATIONCONTROL
-            m_CarMotionData.motorTorque = 0;
-#endif
-
+                #if PADCONTROL || ORIENTATIONROTATIONCONTROL
+                            m_CarMotionData.motorTorque = 0;
+                #endif
             }
 
         }
