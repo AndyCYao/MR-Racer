@@ -94,7 +94,7 @@ public class CheckpointManager : MonoBehaviour
 
     private void SpawnPlayerRandomly()
     {
-        GameManager.Instance.player.transform.position = RayCastCheckpoint() + Vector3.up * .1f;
+        GameManager.Instance.Game.Player.transform.position = RayCastCheckpoint() + Vector3.up * .1f;
     }
 
 
