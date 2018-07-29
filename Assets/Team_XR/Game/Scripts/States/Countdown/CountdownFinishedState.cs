@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class CountdownFinishedState : CountdownState {
-
-    // OnStateEnter is called before OnStateEnter is called on any state inside this state machine
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+namespace Appl.State
+{
+    public class CountdownFinishedState : CountdownState
     {
 
-       
-        m_CountdownText = UIManager.Instance.GetUIComponent("CountdownTextPanel").GetComponentInChildren<Text>();
-        m_CountdownText.text = "START";
-        animator.SetInteger("State", 2);
+        // OnStateEnter is called before OnStateEnter is called on any state inside this state machine
+        override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+        {
 
-        base.OnStateEnter(animator, stateInfo, layerIndex);
+
+            m_CountdownText = Appl.UI.UIManager.Instance.GetUIComponent("CountdownTextPanel").GetComponentInChildren<Text>();
+            m_CountdownText.text = "START";
+            animator.SetInteger("State", 2);
+
+            base.OnStateEnter(animator, stateInfo, layerIndex);
+        }
+
     }
-
- 
 }

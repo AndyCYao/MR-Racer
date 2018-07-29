@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+namespace Appl.UI
+{
+    public class UIComponent : MonoBehaviour
+    {
 
-public class UIComponent : MonoBehaviour {
+  
+        // Use this for initialization
+        protected void Awake()
+        {
 
-    protected Image m_PanelImage;
-	// Use this for initialization
-	protected void Awake () {
-      
-	}
-	
-	// Update is called once per frame
-	protected void Update () {
-		
-	}
+        }
+
+        // Update is called once per frame
+        protected void Update()
+        {
+
+        }
+    }
 }

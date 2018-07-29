@@ -74,7 +74,7 @@ namespace BridgeEngine.Input
 #else
 
 
-            Debug.Log("h " + h + " v " + v );
+//            Debug.Log("h " + h + " v " + v );
             m_CarController.Move(h,v,v,0);
             #endif
         }
@@ -89,18 +89,13 @@ namespace BridgeEngine.Input
                     //orientation.ToAngleAxis(out toAngle, out dumbVector);
                     //transform.rotation.ToAngleAxis(out fromAngle, out dumbVector);
 
-                    Vector3 toRotation =  Vector3.ProjectOnPlane(orientation.eulerAngles, transform.up);
-                    Vector3 fromRotation = Vector3.ProjectOnPlane(transform.eulerAngles, transform.up);
-                    //Vector3 x = transform.rotation.eulerAngles;
-                    float diffAngle = 
-                        ((m_CarMotionData.motorTorque > 0) ? 1 : -1 ) 
-                        *
-                        (
-                            (orientation.eulerAngles.y  - ((orientation.eulerAngles.y   > 180) ? 360 : 0 )) 
-                            - 
-                            (transform.eulerAngles.y    - ((transform.eulerAngles.y     > 180) ? 360 : 0 ))
-                        );
-
+            Vector3 toRotation =  Vector3.ProjectOnPlane(orientation.eulerAngles, transform.up);
+            Vector3 fromRotation = Vector3.ProjectOnPlane(transform.eulerAngles, transform.up);
+            //Vector3 x = transform.rotation.eulerAngles;
+            float diffAngle =
+                
+                -(orientation.eulerAngles.z - ((orientation.eulerAngles.z > 180) ? 360 : 0));
+ 
 
 
             // Vector3.SignedAngle(toRotation, fromRotation, transform.up);

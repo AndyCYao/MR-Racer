@@ -16,6 +16,7 @@ public class Checkpoint : MonoBehaviour {
            // isHit = true;
 
             CheckpointPassedEvent(index);
+           // transform.position = CustomRaycasting.RayCastToScene(CheckpointManager.
             //KillItSelf();
         }
 	}

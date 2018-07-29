@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Appl.State
+{
+    public class CountdownState : State
+    {
+        protected UnityEngine.UI.Text m_CountdownText;
+        // Use this for initialization
 
-public class CountdownState : MRRState {
-    protected UnityEngine.UI.Text m_CountdownText;
-	// Use this for initialization
-	
-	
+
+    }
 }
