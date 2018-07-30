@@ -72,7 +72,7 @@ namespace BridgeEngine.Input
                 direction                   = Mathf.Sign(position.y);
                 m_CarMotionData.motorTorque = direction * Vector2.Distance(position,rootVector);
                 Debug.Log("In A OnTouchEvent position x is " + position.x);
-                m_CarMotionData.steerAngle  = position.x;
+                m_CarMotionData.steerAngle  = Mathf.Clamp(position.x / 0.8f ,-1,1);
             }
 
             if (touchStatus == BEControllerTouchStatus.TouchReleaseContact)
