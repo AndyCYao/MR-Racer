@@ -14,9 +14,10 @@ namespace Appl.State
 
             base.OnStateEnter(animator, stateInfo, layerIndex);
             Game.GameManager.Instance.Game.Player.GetComponent<Rigidbody>().isKinematic = true;
-            UIManager.Instance.GetUIComponent("CountdownTextPanel").GetComponentInChildren<UnityEngine.UI.Text>().text = "GameOver";
+            UIManager.Instance.GetUIComponent("CountdownTextPanel").GetComponentInChildren<UnityEngine.UI.Text>().text = "Game Over";
             UIManager.Instance.GetUIComponent("CountdownTextPanel").gameObject.SetActive(true);
             animator.SetInteger("State", 3);
+          
         }
 
     }
