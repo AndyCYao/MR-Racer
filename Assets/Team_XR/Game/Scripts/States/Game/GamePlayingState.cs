@@ -7,7 +7,7 @@ namespace Appl.State
 {
     public class GamePlayingState : GameState
     {
-        Animator m_Animator;
+   
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             Checkpoint.CheckpointPassedEvent += OnCheckpointPassed;

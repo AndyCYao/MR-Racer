@@ -37,5 +37,18 @@ namespace Appl.State
                 animator.SetInteger("State", 1);
             }
         }
+
+        public override void OnControllerButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
+        {
+            if (current == BEControllerButtons.ButtonPrimary)
+            {
+
+                m_Animator.SetInteger("SubState", 0);
+                m_Animator.SetInteger("State", 1);
+            }
+
+        }
+
+
     }
 }

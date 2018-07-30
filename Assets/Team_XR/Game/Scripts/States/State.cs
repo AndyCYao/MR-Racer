@@ -6,7 +6,7 @@ namespace Appl.State
 {
     public class State : StateMachineBehaviour
     {
-        
+        protected Animator m_Animator;
         public delegate void OnGameState(State state);
         public static OnGameState OnGameStateChangedEnter;
         public static OnGameState OnGameStateChangedExit;
@@ -15,12 +15,20 @@ namespace Appl.State
 
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            m_Animator = animator;
+            BridgeEngineUnity.main.onControllerButtonEvent.AddListener(OnControllerButtonEvent);
             OnGameStateChangedEnter(this);
         }
 
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            BridgeEngineUnity.main.onControllerButtonEvent.RemoveListener(OnControllerButtonEvent);
             OnGameStateChangedExit(this);
+        }
+
+        public virtual void OnControllerButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
+        {
+
         }
     }
 }

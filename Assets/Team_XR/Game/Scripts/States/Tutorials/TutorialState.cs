@@ -15,19 +15,28 @@ namespace Appl.State
 
             uiMessagePanel = UIManager.Instance.GetUIComponent("MessagePanel").GetComponent<UI.UIMessagePanel>();
 
+           
             base.OnStateEnter(animator, stateInfo, layerIndex);
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0)  )
             {
+              
                 animator.SetInteger("SubState", (animator.GetInteger("SubState")) + 1);
             }
         }
 
-
+        public override void OnControllerButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
+        { 
+            if (current == BEControllerButtons.ButtonPrimary){
+                
+                m_Animator.SetInteger("SubState", (m_Animator.GetInteger("SubState")) + 1);
+            }
+                
+        }
 
         // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
         //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
