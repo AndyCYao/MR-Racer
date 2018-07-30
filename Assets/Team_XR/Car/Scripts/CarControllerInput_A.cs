@@ -31,34 +31,11 @@ namespace BridgeEngine.Input
 
         {
 
-
-
-            //if (current == BEControllerButtons.ButtonPrimary || down == BEControllerButtons.ButtonPrimary)
-            //{
-            //    if (m_CarMotionData.motorTorque < m_MaxMotorForce)
-            //    {
-            //        Debug.Log("Primary held down");
-            //        //m_CarMotionData.motorTorque = Mathf.Clamp(m_CarMotionData.motorTorque + m_MaxMotorForce * Time.deltaTime * 0.2f, 0, m_MaxMotorForce);
-
-
-            //    }
-            //    else
-            //    {
-            //        Debug.Log("MotorTorque at maximum");
-            //       // m_CarMotionData.motorTorque = m_MaxMotorForce;
-            //    }
-            //}
             Debug.Log("In A OnButtonEvent");
             if (up == BEControllerButtons.ButtonPrimary)
             {
                 m_CarMotionData.motorTorque = 0;
             }
-
-
-           // m_CarMotionData.brakeTorque =
-            //    (current == BEControllerButtons.ButtonSecondary || down == BEControllerButtons.ButtonSecondary) ? m_MaxBrakeForce : 0f;
-
-
 
             return;
 

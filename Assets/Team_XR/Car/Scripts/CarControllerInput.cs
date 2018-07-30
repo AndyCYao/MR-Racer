@@ -45,56 +45,12 @@ namespace BridgeEngine.Input
             float h = m_CarMotionData.steerAngle;
             float v = m_CarMotionData.motorTorque;
             //float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-<<<<<<< HEAD
-
-#if !MOBILE_INPUT
-                                    float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-                                 //   m_CarController.Move(h, v, v, handbrake);
-#else
-
-
-//            Debug.Log("h " + h + " v " + v );
             m_CarController.Move(h,v,v,0);
-            #endif
         }
-
-
-        void OnMotionEvent(Vector3 position, Quaternion orientation)
-        {
-            #if ORIENTATIONROTATIONCONTROL
-              
-                    //float toAngle, fromAngle;
-                    //Vector3 dumbVector = Vector3.zero;
-                    //orientation.ToAngleAxis(out toAngle, out dumbVector);
-                    //transform.rotation.ToAngleAxis(out fromAngle, out dumbVector);
-
-            Vector3 toRotation =  Vector3.ProjectOnPlane(orientation.eulerAngles, transform.up);
-            Vector3 fromRotation = Vector3.ProjectOnPlane(transform.eulerAngles, transform.up);
-            //Vector3 x = transform.rotation.eulerAngles;
-            float diffAngle =
-                
-                -(orientation.eulerAngles.z - ((orientation.eulerAngles.z > 180) ? 360 : 0));
- 
-
-
-            // Vector3.SignedAngle(toRotation, fromRotation, transform.up);
-
-
-            m_CarMotionData.steerAngle = diffAngle *   
-                ((Mathf.Abs(diffAngle) > c_MinimumRotationMargin) ? 1 : 0);
-                    
-            #endif
-=======
-            Debug.Log("h " + h + " v " + v);
-            m_CarController.Move(h, v, v, 0);
-    
-        }
-
 
         public virtual void OnMotionEvent(Vector3 position, Quaternion orientation)
         {
             Debug.Log("In Parent OnMotionEvent");
->>>>>>> master
         }
 
         /**
@@ -104,7 +60,6 @@ namespace BridgeEngine.Input
 
         {
             Debug.Log("In Parent OnButtonEvent");
-            return;
         }
 
         public virtual void OnTouchEvent(Vector2 position, BEControllerTouchStatus touchStatus)
