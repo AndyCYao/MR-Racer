@@ -20,8 +20,9 @@ namespace Appl.State
             UIManager.Instance.GetUIComponent("MessagePanel").gameObject.SetActive(true);
 
             uiMessagePanel.m_Title.text = "HOW TO PLAY";
-            uiMessagePanel.m_Content.text = "Destroy all that you hold dear.";
-
+            uiMessagePanel.m_Content.text = "Run over anything that move.";
+            uiMessagePanel.m_UITextDescription.gameObject.SetActive(false);
+            uiMessagePanel.m_Figure.gameObject.SetActive(false);
 
             UIManager.Instance.GetUIComponent("ButtonsPanel").gameObject.SetActive(false);
 

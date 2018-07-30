@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: acb332c87473349008906e180c962424
+timeCreated: 1532911665
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: AvenirNextLTW01RegularRegular
+  fontNames:
+  - AvenirNextLTW01RegularRegular
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

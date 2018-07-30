@@ -16,6 +16,8 @@ namespace Appl.UI
         public Text m_Content;
         public Image m_TitleLine;
         public Image m_PanelImage;
+        public Image m_Figure;
+        public UITextDescription m_UITextDescription;
 
         protected void Awake()
         {
@@ -24,6 +26,9 @@ namespace Appl.UI
             m_Content = transform.Find("Content").GetComponent<Text>();
             m_TitleLine = transform.Find("Line").GetComponent<Image>();
             m_PanelImage = transform.Find("Panel").GetComponent<Image>();
+            m_UITextDescription = transform.GetComponentInChildren<UITextDescription>();
+            m_Figure = transform.Find("Figure").GetComponent<Image>();
+
             //        m_ButtonsPanel = transform.Find("ButtonsPanel").gameObject;
 #if DEBUG
             if (!m_Title)
@@ -34,6 +39,8 @@ namespace Appl.UI
                 UIManager.LogMissingChildError(this.GetType().ToString(), "TitleLine");
             if (!m_PanelImage)
                 UIManager.LogMissingChildError(this.GetType().ToString(), "Panel");
+            if (!m_UITextDescription)
+                UIManager.LogMissingChildError(this.GetType().ToString(), "TextDescription");
 #endif
 
         }
