@@ -1,5 +1,3 @@
-#define ORIENTATIONROTATIONCONTROL
-
 using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
@@ -43,7 +41,13 @@ namespace BridgeEngine.Input
 
         public virtual void FixedUpdate()
         {
-            Debug.Log("In Parent FixedUpdate");    
+            // pass the input to the car!
+            float h = m_CarMotionData.steerAngle;
+            float v = m_CarMotionData.motorTorque;
+            //float handbrake = CrossPlatformInputManager.GetAxis("Jump");
+            Debug.Log("h " + h + " v " + v);
+            m_CarController.Move(h, v, v, 0);
+    
         }
 
 
