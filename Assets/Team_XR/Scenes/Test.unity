@@ -11600,7 +11600,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357466474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 320, y: 240, z: 0}
+  m_LocalPosition: {x: 590, y: 389.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1581462370}
@@ -12759,12 +12759,9 @@ GameObject:
   - component: {fileID: 724096346}
   - component: {fileID: 724096347}
   - component: {fileID: 724096345}
-  - component: {fileID: 724096344}
   - component: {fileID: 724096348}
-  - component: {fileID: 724096349}
+  - component: {fileID: 724096344}
   - component: {fileID: 724096343}
-  - component: {fileID: 724096342}
-  - component: {fileID: 724096341}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -12772,44 +12769,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &724096341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114069515180347388, guid: 0e7ee4df08df88c4880f43398f9ad2c2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724096340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb84a0b80293d4744a953c4a3d0fff3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CarMotionData:
-    motorTorque: 0
-    steerAngle: 0
---- !u!114 &724096342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114638553863660070, guid: 0e7ee4df08df88c4880f43398f9ad2c2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724096340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e79b28d139074014bd8ddf7db1f9a19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CarMotionData:
-    motorTorque: 0
-    steerAngle: 0
 --- !u!114 &724096343
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114758876027925698, guid: 0e7ee4df08df88c4880f43398f9ad2c2,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 724096340}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fe8a8f7a0b684f259e4e74376f71fc0, type: 3}
   m_Name: 
@@ -12861,10 +12827,10 @@ MonoBehaviour:
   m_MaximumSteerAngle: 25
   m_SteerHelper: 0.644
   m_TractionControl: 1
-  m_FullTorqueOverAllWheels: 1200
-  m_ReverseTorque: 250
+  m_FullTorqueOverAllWheels: 100
+  m_ReverseTorque: 25
   m_MaxHandbrakeTorque: 100000000
-  m_Downforce: 100
+  m_Downforce: 10
   m_SpeedType: 0
   m_Topspeed: 50
   m_RevRangeBoundary: 1
@@ -12930,21 +12896,6 @@ MonoBehaviour:
   maxRolloffDistance: 500
   dopplerLevel: 1
   useDoppler: 1
---- !u!114 &724096349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114902231214393936, guid: 0e7ee4df08df88c4880f43398f9ad2c2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724096340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7f28bb6ad89d448b9d59c1513ffea5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CarMotionData:
-    motorTorque: 0
-    steerAngle: 0
 --- !u!1 &724108053
 GameObject:
   m_ObjectHideFlags: 0

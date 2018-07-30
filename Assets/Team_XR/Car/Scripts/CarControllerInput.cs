@@ -10,21 +10,8 @@ namespace BridgeEngine.Input
     {
         const float c_MinimumRotationMargin = 2f;
 
-
-
-        UnityStandardAssets.Vehicles.Car.CarController m_CarController;
+        protected UnityStandardAssets.Vehicles.Car.CarController m_CarController;
         BridgeEngineUnity beUnity;
-        //[SerializeField]
-        //float
-        /// <summary>
-        /// max motor force.
-        /// </summary>
-        //m_MaxMotorForce,
-
-        /// <summary>
-        /// The max steer force.
-        /// </summary>
-        //m_MaxSteerAngle;
 
         [Serializable]
         protected class CarMotionData
@@ -35,7 +22,7 @@ namespace BridgeEngine.Input
         }
         [SerializeField]
         protected CarMotionData m_CarMotionData;
-        private void Awake()
+        protected void Awake()
         {
             m_CarController = GetComponent<UnityStandardAssets.Vehicles.Car.CarController>();
             m_CarMotionData = new CarMotionData();
@@ -56,53 +43,13 @@ namespace BridgeEngine.Input
 
         public virtual void FixedUpdate()
         {
-            // pass the input to the car!
-            float h = m_CarMotionData.steerAngle / 360;
-            float v = m_CarMotionData.motorTorque;
-            //float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-
-            #if !MOBILE_INPUT
-                float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-                 //   m_CarController.Move(h, v, v, handbrake);
-            #else
-
-
-            Debug.Log("h " + h + " v " + v );
-            m_CarController.Move(h,v,v,0);
-            #endif
+            Debug.Log("In Parent FixedUpdate");    
         }
 
 
         public virtual void OnMotionEvent(Vector3 position, Quaternion orientation)
         {
-            #if ORIENTATIONROTATIONCONTROL
-              
-                    //float toAngle, fromAngle;
-                    //Vector3 dumbVector = Vector3.zero;
-                    //orientation.ToAngleAxis(out toAngle, out dumbVector);
-                    //transform.rotation.ToAngleAxis(out fromAngle, out dumbVector);
-
-                    Vector3 toRotation =  Vector3.ProjectOnPlane(orientation.eulerAngles, transform.up);
-                    Vector3 fromRotation = Vector3.ProjectOnPlane(transform.eulerAngles, transform.up);
-                    //Vector3 x = transform.rotation.eulerAngles;
-                    float diffAngle = 
-                        ((m_CarMotionData.motorTorque > 0) ? 1 : -1 ) 
-                        *
-                        (
-                            (orientation.eulerAngles.y  - ((orientation.eulerAngles.y   > 180) ? 360 : 0 )) 
-                            - 
-                            (transform.eulerAngles.y    - ((transform.eulerAngles.y     > 180) ? 360 : 0 ))
-                        );
-
-
-
-            // Vector3.SignedAngle(toRotation, fromRotation, transform.up);
-
-
-            m_CarMotionData.steerAngle = diffAngle *   
-                ((Mathf.Abs(diffAngle) > c_MinimumRotationMargin) ? 1 : 0);
-                    
-            #endif
+            Debug.Log("In Parent OnMotionEvent");
         }
 
         /**
@@ -111,63 +58,14 @@ namespace BridgeEngine.Input
         public virtual void OnButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
 
         {
-
-
-
-            //if (current == BEControllerButtons.ButtonPrimary || down == BEControllerButtons.ButtonPrimary)
-            //{
-            //    if (m_CarMotionData.motorTorque < m_MaxMotorForce)
-            //    {
-            //        Debug.Log("Primary held down");
-            //        //m_CarMotionData.motorTorque = Mathf.Clamp(m_CarMotionData.motorTorque + m_MaxMotorForce * Time.deltaTime * 0.2f, 0, m_MaxMotorForce);
-
-
-            //    }
-            //    else
-            //    {
-            //        Debug.Log("MotorTorque at maximum");
-            //       // m_CarMotionData.motorTorque = m_MaxMotorForce;
-            //    }
-            //}
-
-            if (up == BEControllerButtons.ButtonPrimary)
-            {
-                m_CarMotionData.motorTorque = 0;
-            }
-
-
-           // m_CarMotionData.brakeTorque =
-            //    (current == BEControllerButtons.ButtonSecondary || down == BEControllerButtons.ButtonSecondary) ? m_MaxBrakeForce : 0f;
-
-
-
+            Debug.Log("In Parent OnButtonEvent");
             return;
-
         }
 
         public virtual void OnTouchEvent(Vector2 position, BEControllerTouchStatus touchStatus)
         {
-            if (touchStatus == BEControllerTouchStatus.TouchFirstContact || touchStatus == BEControllerTouchStatus.TouchMove)
-            {
-                #if PADCONTROL || ORIENTATIONROTATIONCONTROL
-                            m_CarMotionData.motorTorque = position.y;
-                #endif
-
-                #if PADCONTROL || PADROTATIONTRIGGERACCELERATION
-                            m_CarMotionData.steerAngle = m_MaxSteerAngle * position.x;
-                #endif
-                            }
-
-                            if (touchStatus == BEControllerTouchStatus.TouchReleaseContact)
-                            {
-                                m_CarMotionData.steerAngle = 0;
-
-                #if PADCONTROL || ORIENTATIONROTATIONCONTROL
-                            m_CarMotionData.motorTorque = 0;
-                #endif
-            }
+            Debug.Log("In Parent OnTouchEvent");
 
         }
-
     }
 }

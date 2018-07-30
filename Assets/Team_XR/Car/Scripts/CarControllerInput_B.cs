@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-/*
+/* NOT USED
  * Trigger Button as Acceleration 
+ * 
  */
 
 namespace BridgeEngine.Input{
