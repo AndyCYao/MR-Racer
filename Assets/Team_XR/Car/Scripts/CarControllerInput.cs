@@ -20,10 +20,16 @@ namespace BridgeEngine.Input
         }
         [SerializeField]
         protected CarMotionData m_CarMotionData;
+        [SerializeField]
+        GameObject m_ExplosionBoom;
+        [SerializeField]
+        GameObject m_ExplosionCrash;
+
         protected void Awake()
         {
             m_CarController = GetComponent<UnityStandardAssets.Vehicles.Car.CarController>();
             m_CarMotionData = new CarMotionData();
+            //m_Explosion = transform.Find("CartoonBoom_V2").gameObject;
 
             beUnity = BridgeEngineUnity.main;
             if (beUnity)
@@ -66,6 +72,17 @@ namespace BridgeEngine.Input
         {
             Debug.Log("In Parent OnTouchEvent");
 
+        }
+
+		public void OnCollisionEnter(Collision collision)
+		{
+            Debug.Log("Collided with " + collision.gameObject.name);
+            TriggerExplosion(collision.contacts[0].point);
+		}
+
+        public void TriggerExplosion(Vector3 position){
+            //m_Explosion.SetActive(true);
+            Destroy(Instantiate (m_ExplosionBoom, position, Quaternion.identity) , 1.5f);
         }
     }
 }
