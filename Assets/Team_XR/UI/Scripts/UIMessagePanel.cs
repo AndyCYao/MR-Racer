@@ -46,6 +46,12 @@ namespace Appl.UI
         }
 
 
+        public void Clear () {
+            m_Content.gameObject.SetActive(false);
+           
+            m_UITextDescription.gameObject.SetActive(false);
+            m_Figure.gameObject.SetActive(false);
+        }
 
 
     }

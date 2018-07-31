@@ -684,7 +684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HOW TO PLAY
+  m_Text: 
 --- !u!114 &114200243763052416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -718,7 +718,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a3877666be2fd4ce5899e52ad6f23357, type: 3}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -734,12 +734,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822028508857816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eeec38e15bf74971ac3c21b0e499e04, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ffae7014e6cb4438a600a3dcc452d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_DescriptionTextPrefab: {fileID: 1552040372108530, guid: 4c9edf63d0899419ab2a6a950fa1e72a,
     type: 2}
-  m_ControllerButtonLocations: []
 --- !u!114 &114280942144293098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -960,9 +959,9 @@ MonoBehaviour:
   m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 0.772}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.772}
   m_EffectDistance: {x: 0, y: -2}
-  m_UseGraphicAlpha: 1
+  m_UseGraphicAlpha: 0
 --- !u!114 &114555727360609512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1309,7 +1308,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
@@ -1626,7 +1625,7 @@ RectTransform:
   m_Father: {fileID: 224636956160782696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.19000001, y: 0}
+  m_AnchorMin: {x: 0.3, y: 0}
   m_AnchorMax: {x: 0.9, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -1644,8 +1643,8 @@ RectTransform:
   m_Father: {fileID: 224299402336450386}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.888, y: 0.86}
-  m_AnchorMax: {x: 0.922, y: 0.96}
+  m_AnchorMin: {x: 0.788, y: 0.86}
+  m_AnchorMax: {x: 0.822, y: 0.96}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1655,8 +1654,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1498172593252088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.8}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.20000005}
   m_LocalScale: {x: 0.0006158403, y: 0.0006158403, z: 0.0006158403}
   m_Children:
   - {fileID: 224022897562691752}
@@ -1668,7 +1667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 668, y: 375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224189554102333110
@@ -1873,8 +1872,8 @@ RectTransform:
   m_Father: {fileID: 224022897562691752}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.22, y: 0.629}
-  m_AnchorMax: {x: 0.78, y: 0.76}
+  m_AnchorMin: {x: 0.14, y: 0.629}
+  m_AnchorMax: {x: 0.86, y: 0.76}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1947,10 +1946,10 @@ RectTransform:
   m_Father: {fileID: 224299402336450386}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.886, y: 0.86}
-  m_AnchorMax: {x: 1, y: 0.95}
-  m_AnchoredPosition: {x: 11, y: 0}
-  m_SizeDelta: {x: -2, y: 0}
+  m_AnchorMin: {x: 0.786, y: 0.86}
+  m_AnchorMax: {x: 0.912, y: 0.95}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224647679887072670
 RectTransform:
