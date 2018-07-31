@@ -109,12 +109,11 @@ namespace BridgeEngine.Input
             isReadyEffect = true;
         }
 
-<<<<<<< .merge_file_ZzOxCq
+
         public IEnumerator TriggerWallImpactEffect(Vector3 position){
-=======
-        public IEnumerator TriggerWallImpactEffect(Vector3 position)
-        {
->>>>>>> .merge_file_MDL5ww
+
+        
+
             isReadyEffect = false;
             System.Random rnd = new System.Random();
             int explosionIdx = rnd.Next(0, m_EffectExplosionCrash.Length);
@@ -123,14 +122,12 @@ namespace BridgeEngine.Input
             isReadyEffect = true;
         }
 
-<<<<<<< .merge_file_ZzOxCq
-        public void TriggerGameOverBoomEffect(Vector3 position){
-=======
+
         public void TriggerGameOverBoomEffect(Vector3 position)
         {
             Animator animator = transform.Find("Car_Body").Find("Driver").GetComponent<Animator>();
             animator.SetTrigger("DriverEjectedTrigger");
->>>>>>> .merge_file_MDL5ww
+
             Destroy(Instantiate(m_EffectExplosionBoom, position, Quaternion.identity), 1.5f);
         }
     }
