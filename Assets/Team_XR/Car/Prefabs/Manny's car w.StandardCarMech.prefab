@@ -712,8 +712,10 @@ GameObject:
   - component: {fileID: 4310195795188856}
   - component: {fileID: 54019639630326710}
   - component: {fileID: 114649420967611356}
-  - component: {fileID: 114521742647175628}
   - component: {fileID: 114445654981580222}
+  - component: {fileID: 114964965147337664}
+  - component: {fileID: 114765215120391194}
+  - component: {fileID: 114586345369877108}
   m_Layer: 0
   m_Name: Manny's car w.StandardCarMech
   m_TagString: Player
@@ -1060,8 +1062,8 @@ Transform:
   - {fileID: 4566889263727824}
   - {fileID: 4797850346608784}
   - {fileID: 4694151197341334}
-  - {fileID: 4933081027553638}
   - {fileID: 4610943236267398}
+  - {fileID: 4933081027553638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1284,7 +1286,7 @@ Transform:
   - {fileID: 4765062660518234}
   - {fileID: 4755159622128516}
   m_Father: {fileID: 4310195795188856}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4613888364172996
 Transform:
@@ -1497,7 +1499,7 @@ Transform:
   - {fileID: 4535194803766888}
   - {fileID: 4164187905962830}
   m_Father: {fileID: 4310195795188856}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4936535684356522
 Transform:
@@ -3075,7 +3077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 114649420967611356}
---- !u!114 &114521742647175628
+--- !u!114 &114586345369877108
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3089,6 +3091,14 @@ MonoBehaviour:
   m_CarMotionData:
     motorTorque: 0
     steerAngle: 0
+  m_EffectExplosionBoom: {fileID: 1519662181827264, guid: 99717c31fbe92496b82cd455b611da17,
+    type: 2}
+  m_EffectExplosionCrash:
+  - {fileID: 1948590065697388, guid: 6ad4397ab57024e7d8b8e90b2221393a, type: 2}
+  - {fileID: 1765801388902988, guid: 41e43383f859a4a7087cbd860b576988, type: 2}
+  - {fileID: 1363881645042392, guid: f7f36af0c16694cbdacc592a307ca6a8, type: 2}
+  m_EffectGroundImpact: {fileID: 1519662181827264, guid: 99717c31fbe92496b82cd455b611da17,
+    type: 2}
 --- !u!114 &114649420967611356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3142,6 +3152,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 2}
   skidParticles: {fileID: 0}
+--- !u!114 &114765215120391194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844682352286806}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb84a0b80293d4744a953c4a3d0fff3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CarMotionData:
+    motorTorque: 0
+    steerAngle: 0
+  m_EffectExplosionBoom: {fileID: 1519662181827264, guid: 99717c31fbe92496b82cd455b611da17,
+    type: 2}
+  m_EffectExplosionCrash:
+  - {fileID: 1948590065697388, guid: 6ad4397ab57024e7d8b8e90b2221393a, type: 2}
+  - {fileID: 1765801388902988, guid: 41e43383f859a4a7087cbd860b576988, type: 2}
+  - {fileID: 1363881645042392, guid: f7f36af0c16694cbdacc592a307ca6a8, type: 2}
+  m_EffectGroundImpact: {fileID: 1519662181827264, guid: 99717c31fbe92496b82cd455b611da17,
+    type: 2}
 --- !u!114 &114885941951400082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3154,6 +3186,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carController: {fileID: 114649420967611356}
+--- !u!114 &114964965147337664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844682352286806}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb75c3f0e9cf42bab9811b71c3c0129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CarMotionData:
+    motorTorque: 0
+    steerAngle: 0
+  m_EffectExplosionBoom: {fileID: 1740159930888202, guid: 877af79439be84cf38459435eea29e69,
+    type: 2}
+  m_EffectExplosionCrash:
+  - {fileID: 1948590065697388, guid: 6ad4397ab57024e7d8b8e90b2221393a, type: 2}
+  - {fileID: 1765801388902988, guid: 41e43383f859a4a7087cbd860b576988, type: 2}
+  - {fileID: 1363881645042392, guid: f7f36af0c16694cbdacc592a307ca6a8, type: 2}
+  m_EffectGroundImpact: {fileID: 1519662181827264, guid: 99717c31fbe92496b82cd455b611da17,
+    type: 2}
 --- !u!135 &135213149998419564
 SphereCollider:
   m_ObjectHideFlags: 1
