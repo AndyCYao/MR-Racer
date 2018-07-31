@@ -11,7 +11,7 @@ namespace BridgeEngine.Input
         const float c_MinimumRotationMargin = 2f;
         Vector2 rootVector = new Vector2(0, 0);
         float direction;
-
+        float resetConfirmTime = -1;
         //UnityStandardAssets.Vehicles.Car.CarController m_CarController;
         //BridgeEngineUnity beUnity;
 
@@ -30,11 +30,35 @@ namespace BridgeEngine.Input
         public override void OnButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
 
         {
-
-            //Debug.Log("In A OnButtonEvent");
             if (up == BEControllerButtons.ButtonPrimary)
             {
                 m_CarMotionData.motorTorque = 0;
+            }
+
+            if (current == (BEControllerButtons.ButtonPrimary | BEControllerButtons.ButtonSecondary))
+            {
+
+                if (down == BEControllerButtons.ButtonSecondary
+                && Mathf.Approximately(resetConfirmTime, -1))
+                {
+                    Debug.Log("CarControllerInput_A - OnControllerButton: Reset button sequence being pressed!");
+                    resetConfirmTime = 0;
+                    StartCoroutine(CheckButtonHold());
+                }
+
+
+            }
+
+            // New design, pressing the secondary button will reset the car
+            if (up == BEControllerButtons.ButtonSecondary)
+            {
+
+                if (resetConfirmTime > 1)
+                {
+                    Debug.Log(string.Format("CarControllerInput_A - OnControllerButton: Reset Vehicle!"));
+                    SpawnPlayerRandomly();
+                }
+                resetConfirmTime = -1;
             }
 
             return;
@@ -60,5 +84,20 @@ namespace BridgeEngine.Input
 
         }
 
+        IEnumerator CheckButtonHold()
+        {
+
+            while (resetConfirmTime >= 0 && resetConfirmTime < 1)
+            {
+                resetConfirmTime += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+            if (!Mathf.Approximately(resetConfirmTime, -1))
+            {
+                resetConfirmTime = -1;
+                SpawnPlayerRandomly();
+            }
+
+        }
     }
 }
