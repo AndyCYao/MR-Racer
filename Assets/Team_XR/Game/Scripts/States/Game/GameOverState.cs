@@ -13,7 +13,9 @@ namespace Appl.State
             //uiMessagePanel = UIManager.Instance.GetUIComponent("MessagePanel").GetComponent<UI.UIMessagePanel>();
 
             base.OnStateEnter(animator, stateInfo, layerIndex);
-            Game.GameManager.Instance.Game.Player.GetComponent<Rigidbody>().isKinematic = true;
+            GameObject player = Game.GameManager.Instance.Game.Player;
+            player.GetComponent<BridgeEngine.Input.CarControllerInput>().TriggerGameOverBoomEffect(player.transform.position);
+            player.GetComponent<Rigidbody>().isKinematic = true;
             UIManager.Instance.GetUIComponent("CountdownTextPanel").GetComponentInChildren<UnityEngine.UI.Text>().text = "Game Over";
             UIManager.Instance.GetUIComponent("CountdownTextPanel").gameObject.SetActive(true);
             animator.SetInteger("State", 3);

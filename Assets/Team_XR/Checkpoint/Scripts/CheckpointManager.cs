@@ -22,11 +22,6 @@ public class CheckpointManager : MonoBehaviour
         get { return m_CheckpointCount; }
     }
 
-    static CheckpointManager s_Instance;
-    public static CheckpointManager Instance {
-        get { return s_Instance; }
-    }
-
     Transform checkPointObject;
 
     public delegate void NewCheckpointCreated(CheckpointEventData data);
@@ -38,23 +33,15 @@ public class CheckpointManager : MonoBehaviour
 
     private void Awake()
     {
-        
-
-        if (!s_Instance)
-            s_Instance = this;
-        else {
-            Destroy(gameObject);
-        }
-
         BEScene.OnEnvironmentMeshCreated += Reset;
-
+       
         checkPointObject = transform.Find("Checkpoint");
-  
+        //player = GameManager.Instance.player;
     }
 
 	private void Reset()
 	{
-        
+        Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
         BridgeEngineUnity.main.onControllerButtonEvent.AddListener(OnControllerButton);
 
 
@@ -114,33 +101,26 @@ public class CheckpointManager : MonoBehaviour
 
  
 
-    public void OnCheckpointReached (int index) {
+    void OnCheckpointReached (int index) {
         Debug.Log(string.Format("CheckpointManager - OnCheckpointReached: {0}", index));
-        //  checkPointObject.transform.position = CustomRaycasting.RayCastToScene(transform.position);
-        StartCoroutine(MakeNewCheckpoint(CustomRaycasting.RayCastToScene(transform.position)));
-    
+        checkPointObject.transform.position = CustomRaycasting.RayCastToScene(transform.position);
+
         Debug.Log(string.Format("New checkpoint spawned at {0}", checkPointObject.transform.position.ToString()));
     }
 
-    public IEnumerator MakeNewCheckpoint(Vector3 newCheckpointPosition)
+    IEnumerator MakeNewCheckpoint(Vector3 newCheckpointPosition)
     {
-        float transittingTime = 2f;
+        float transittingTime = 3f;
         float currentTimePassSinceTransition = 0f;
         Vector3 oldPosition = checkPointObject.position;
 
-        Game.GameManager.Instance.Game.TimeRemaining += Game.Game.TimeAllowanceSetting.GetTimeBonus(
-            Game.GameManager.Instance.Game.CheckPointCount, Vector3.Distance(oldPosition, newCheckpointPosition));
-
-        Game.GameManager.Instance.Game.CheckPointCount++;
-        Checkpoint.CheckpointPassedEvent -= OnCheckpointReached;
         while (currentTimePassSinceTransition < transittingTime)
         {
             currentTimePassSinceTransition += Time.deltaTime;
+
             checkPointObject.position = Vector3.Lerp(oldPosition, newCheckpointPosition, currentTimePassSinceTransition / transittingTime);
             yield return new WaitForEndOfFrame();
         }
-
-        Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
     }
 
 }

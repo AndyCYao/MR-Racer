@@ -10,7 +10,7 @@ namespace Appl.State
    
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-       //     Checkpoint.CheckpointPassedEvent += OnCheckpointPassed;
+            Checkpoint.CheckpointPassedEvent += OnCheckpointPassed;
             m_Game = GameManager.Instance.Game;
             m_Game.OnGameOverEvent += OnGameOver;
             //uiMessagePanel = UIManager.Instance.GetUIComponent("MessagePanel").GetComponent<UI.UIMessagePanel>();
@@ -18,7 +18,7 @@ namespace Appl.State
            
             Game.GameManager. Instance.Game.Player.GetComponent<Rigidbody>().isKinematic = false;
 
-            Checkpoint.CheckpointPassedEvent += CheckpointManager.Instance.OnCheckpointReached;
+
             m_Game.CheckPointCount = 0;
             base.OnStateEnter(animator, stateInfo, layerIndex);
         }
@@ -32,16 +32,14 @@ namespace Appl.State
 
         }
 
- 
+        void OnCheckpointPassed (int count) {
+
+            m_Game.CheckPointCount ++;
+
+        }
 
         void OnGameOver (){
             m_Animator.SetTrigger("GameOver");
         }
-
-		public override void OnStateMachineExit(Animator animator, int stateMachinePathHash)
-		{
-            base.OnStateMachineExit(animator, stateMachinePathHash);
-            Checkpoint.CheckpointPassedEvent -= CheckpointManager.Instance.OnCheckpointReached;
-		}
-	}
+    }
 }

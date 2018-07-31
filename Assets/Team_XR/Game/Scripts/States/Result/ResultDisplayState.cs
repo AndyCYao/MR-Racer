@@ -31,7 +31,7 @@ namespace Appl.State
 
         public override void OnControllerButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
         {
-            if (down == BEControllerButtons.ButtonPrimary)
+            if (current == BEControllerButtons.ButtonPrimary)
             {
 
                 m_Animator.SetInteger("State", 1);
