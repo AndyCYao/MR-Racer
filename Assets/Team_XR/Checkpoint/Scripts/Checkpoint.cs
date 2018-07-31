@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour {
     public int index;
-    public bool isHit = false;
+    bool isHit = false;
 
     public delegate void CheckpointPassed (int index);
     public static event CheckpointPassed CheckpointPassedEvent;

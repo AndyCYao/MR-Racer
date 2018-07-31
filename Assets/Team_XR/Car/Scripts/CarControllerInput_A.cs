@@ -31,7 +31,7 @@ namespace BridgeEngine.Input
 
         {
 
-            Debug.Log("In A OnButtonEvent");
+            //Debug.Log("In A OnButtonEvent");
             if (up == BEControllerButtons.ButtonPrimary)
             {
                 m_CarMotionData.motorTorque = 0;
