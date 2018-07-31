@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 1645977810339496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.466, y: 0, z: -0.037}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4426804688506696}
   - {fileID: 4506708065256012}
@@ -222,7 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c53c4cd5393d44088209cfb4d1efaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCheckPoints: 0
+  player: {fileID: 0}
+  m_CheckpointCount: 0
+  confirmTime: -1
 --- !u!135 &135590986239538718
 SphereCollider:
   m_ObjectHideFlags: 1

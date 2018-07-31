@@ -13,7 +13,7 @@ namespace BridgeEngine.Input
         float direction;
 
         //UnityStandardAssets.Vehicles.Car.CarController m_CarController;
-        BridgeEngineUnity beUnity;
+       
 
         public override void FixedUpdate()
         {
@@ -47,9 +47,9 @@ namespace BridgeEngine.Input
             if (touchStatus == BEControllerTouchStatus.TouchFirstContact || touchStatus == BEControllerTouchStatus.TouchMove)
             {
                 direction                   = Mathf.Sign(position.y);
-                m_CarMotionData.motorTorque = direction * Vector2.Distance(position,rootVector);
+                m_CarMotionData.motorTorque = direction * Mathf.Pow (Vector2.Distance(position,rootVector), m_ThrustPower);
                 Debug.Log("In A OnTouchEvent position x is " + position.x);
-                m_CarMotionData.steerAngle  = Mathf.Clamp(position.x / 0.8f ,-1,1);
+                m_CarMotionData.steerAngle  = Mathf.Pow (Mathf.Clamp(position.x / 0.8f ,-1,1), m_RotatePower);
             }
 
             if (touchStatus == BEControllerTouchStatus.TouchReleaseContact)

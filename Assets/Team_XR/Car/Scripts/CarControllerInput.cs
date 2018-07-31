@@ -7,9 +7,13 @@ namespace BridgeEngine.Input
     public class CarControllerInput : MonoBehaviour
     {
         const float c_MinimumRotationMargin = 2f;
+        const float C_DeadZone = 0.25f;
+
+        [SerializeField] protected float m_ThrustPower;
+        [SerializeField] protected float m_RotatePower;
 
         protected UnityStandardAssets.Vehicles.Car.CarController m_CarController;
-        BridgeEngineUnity beUnity;
+        protected BridgeEngineUnity beUnity;
 
         [Serializable]
         protected class CarMotionData

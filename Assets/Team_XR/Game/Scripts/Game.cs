@@ -16,14 +16,19 @@ namespace Game
         public event OnGameOver OnGameOverEvent;
 
 
-        class TimeAllowanceSetting
+        public class TimeAllowanceSetting
         {
-            public const short C_StartTime = 90;
-            public const short C_BaseTimeBonus = 5;
+            public const short C_StartTime = 120;
+            public const short C_BaseTimeBonusMax = 20;
+            public const short C_BaseTimeBonusMin = 5;
 
-            public static float GetTimeBonusBasedOnNumberOfCheckPoints(int checkpointCount)
+           // public const short C_MaxDistancePosibld
+
+            public static float GetTimeBonus(int checkpointCount, float distant)
             {
-                return C_BaseTimeBonus - checkpointCount * 0.2f;
+                return distant * Mathf.Clamp (   
+                                              C_BaseTimeBonusMax - checkpointCount * 0.5f,
+                                              C_BaseTimeBonusMin, C_BaseTimeBonusMax );
             }
         }
 
