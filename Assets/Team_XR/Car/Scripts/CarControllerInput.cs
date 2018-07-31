@@ -21,11 +21,11 @@ namespace BridgeEngine.Input
         [SerializeField]
         protected CarMotionData m_CarMotionData;
         [SerializeField]
-        GameObject m_EffectExplosionBoom;
+        public GameObject m_EffectExplosionBoom;
         [SerializeField]
-        GameObject[] m_EffectExplosionCrash;
+        public GameObject[] m_EffectExplosionCrash;
         [SerializeField]
-        GameObject m_EffectGroundImpact;
+        public GameObject m_EffectGroundImpact;
 
         bool isReadyEffect = true;
         float effectCoolDown = 1.5f;
@@ -118,5 +118,8 @@ namespace BridgeEngine.Input
             isReadyEffect = true;
         }
 
+        public void TriggerGameOverBoomEffect(Vector3 position){
+            Destroy(Instantiate(m_EffectExplosionBoom, position, Quaternion.identity), 1.5f);
+        }
     }
 }

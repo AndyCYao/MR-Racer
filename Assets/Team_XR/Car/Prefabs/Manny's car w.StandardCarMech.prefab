@@ -2953,7 +2953,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  isHit: 0
 --- !u!114 &114007531616995918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3064,7 +3063,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  isHit: 0
 --- !u!114 &114514713385174730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3091,7 +3089,7 @@ MonoBehaviour:
   m_CarMotionData:
     motorTorque: 0
     steerAngle: 0
-  m_EffectExplosionBoom: {fileID: 1519662181827264, guid: 99717c31fbe92496b82cd455b611da17,
+  m_EffectExplosionBoom: {fileID: 1740159930888202, guid: 877af79439be84cf38459435eea29e69,
     type: 2}
   m_EffectExplosionCrash:
   - {fileID: 1948590065697388, guid: 6ad4397ab57024e7d8b8e90b2221393a, type: 2}
@@ -3166,7 +3164,7 @@ MonoBehaviour:
   m_CarMotionData:
     motorTorque: 0
     steerAngle: 0
-  m_EffectExplosionBoom: {fileID: 1519662181827264, guid: 99717c31fbe92496b82cd455b611da17,
+  m_EffectExplosionBoom: {fileID: 1740159930888202, guid: 877af79439be84cf38459435eea29e69,
     type: 2}
   m_EffectExplosionCrash:
   - {fileID: 1948590065697388, guid: 6ad4397ab57024e7d8b8e90b2221393a, type: 2}
