@@ -79,7 +79,7 @@ namespace BridgeEngine.Input{
             float newSpeed = 0;
             while(primaryButtonTimeHeld >= 0)
             {
-                Debug.Log("Accelerating... primaryButtonTimeHeld " + primaryButtonTimeHeld);
+                //Debug.Log("Accelerating... primaryButtonTimeHeld " + primaryButtonTimeHeld);
                 // m_CarMotionData.motorTorque =  Mathf.Clamp(Mathf.Pow(primaryButtonTimeHeld, 3),0,1);
                 newSpeed = m_CarMotionData.motorTorque + (float)0.5 * Time.deltaTime;
                 m_CarMotionData.motorTorque = Mathf.Min(1, newSpeed);
@@ -95,7 +95,7 @@ namespace BridgeEngine.Input{
             // While the releaseSignal is not given, keep reversing.
             while (secondaryButtonTimeHeld >= 0)
             {
-                Debug.Log("reversing... secondaryButtonTimeHeld " + secondaryButtonTimeHeld);
+                //Debug.Log("reversing... secondaryButtonTimeHeld " + secondaryButtonTimeHeld);
                 newSpeed = m_CarMotionData.motorTorque - (float)0.5 * Time.deltaTime;
                 m_CarMotionData.motorTorque = newSpeed;
                 secondaryButtonTimeHeld += Time.deltaTime;

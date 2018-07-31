@@ -1,0 +1,226 @@
+fileFormatVersion: 2
+guid: f2cac56e1550947caa2b4a558cfc8734
+timeCreated: 1533062449
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: basic_rig Footsteps
+    100002: basic_rig Head
+    100004: Bip001 HeadNub
+    100006: Bip001 L Finger0Nub
+    100008: Bip001 L Finger1Nub
+    100010: Bip001 L Finger2Nub
+    100012: Bip001 R Finger0Nub
+    100014: Bip001 R Finger1Nub
+    100016: Bip001 R Finger2Nub
+    100018: Calf_L
+    100020: Calf_R
+    100022: Clavicle_L
+    100024: Clavicle_R
+    100026: Finger0_L
+    100028: Finger0_R
+    100030: Finger1_L
+    100032: Finger1_R
+    100034: Finger2_L
+    100036: Finger2_R
+    100038: Foot_L
+    100040: Foot_R
+    100042: Forearm_L
+    100044: Forearm_R
+    100046: greasePencilFrontArtDrawPlane
+    100048: greasePencilFrontRenderPlane
+    100050: greasePencilTopArtDrawPlane
+    100052: greasePencilTopRenderPlane
+    100054: Hand_L
+    100056: Hand_R
+    100058: left
+    100060: Man_Body
+    100062: Man_In_Car
+    100064: Man_Rig
+    100066: //RootNode
+    100068: Neck
+    100070: Nub
+    100072: Nub 1
+    100074: Pelvis
+    100076: persp1
+    100078: Spine
+    100080: Spine_2
+    100082: Thigh_L
+    100084: Thigh_R
+    100086: Toe0_L
+    100088: Toe0_R
+    100090: top1
+    100092: UpperArm_L
+    100094: UpperArm_R
+    400000: basic_rig Footsteps
+    400002: basic_rig Head
+    400004: Bip001 HeadNub
+    400006: Bip001 L Finger0Nub
+    400008: Bip001 L Finger1Nub
+    400010: Bip001 L Finger2Nub
+    400012: Bip001 R Finger0Nub
+    400014: Bip001 R Finger1Nub
+    400016: Bip001 R Finger2Nub
+    400018: Calf_L
+    400020: Calf_R
+    400022: Clavicle_L
+    400024: Clavicle_R
+    400026: Finger0_L
+    400028: Finger0_R
+    400030: Finger1_L
+    400032: Finger1_R
+    400034: Finger2_L
+    400036: Finger2_R
+    400038: Foot_L
+    400040: Foot_R
+    400042: Forearm_L
+    400044: Forearm_R
+    400046: greasePencilFrontArtDrawPlane
+    400048: greasePencilFrontRenderPlane
+    400050: greasePencilTopArtDrawPlane
+    400052: greasePencilTopRenderPlane
+    400054: Hand_L
+    400056: Hand_R
+    400058: left
+    400060: Man_Body
+    400062: Man_In_Car
+    400064: Man_Rig
+    400066: //RootNode
+    400068: Neck
+    400070: Nub
+    400072: Nub 1
+    400074: Pelvis
+    400076: persp1
+    400078: Spine
+    400080: Spine_2
+    400082: Thigh_L
+    400084: Thigh_R
+    400086: Toe0_L
+    400088: Toe0_R
+    400090: top1
+    400092: UpperArm_L
+    400094: UpperArm_R
+    2000000: left
+    2000002: persp1
+    2000004: top1
+    4300000: Man_Body
+    7400000: GameOverManFalling
+    9500000: //RootNode
+    13700000: Man_Body
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 319204d8bc5fd437ca57db485c15de08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face
+    second: {fileID: 2100000, guid: f5ace59ea98174639a0ebbcb9f4b189d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GameOverManFalling
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -18,7 +18,7 @@ namespace Game
 
         class TimeAllowanceSetting
         {
-            public const short C_StartTime = 90;
+            public const short C_StartTime = 10;
             public const short C_BaseTimeBonus = 5;
 
             public static float GetTimeBonusBasedOnNumberOfCheckPoints(int checkpointCount)
