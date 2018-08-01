@@ -94,32 +94,57 @@ namespace BridgeEngine.Input
       
             if(isReadyEffect && (Vector3.Angle(collision.contacts[0].normal, Vector3.up) < 10f))
             {
-                StartCoroutine(TriggerGroundImpactEffect(collision.contacts[0].point));  
+
+                StartCoroutine(TriggerGroundImpactEffect(collision.contacts[0].point, collision ));  
             }
            
             else if (isReadyEffect &&
                      (Vector3.Angle(Vector3.up, Vector3.forward) > 80f) && 
                      (Vector3.Angle(Vector3.up, Vector3.forward) < 100f))
             {
-                StartCoroutine(TriggerWallImpactEffect(collision.contacts[0].point));   
+                StartCoroutine(TriggerWallImpactEffect(collision.contacts[0].point, collision));   
             }
 		}
 
-        public IEnumerator TriggerGroundImpactEffect(Vector3 position)
+        public IEnumerator TriggerGroundImpactEffect(Vector3 position, Collision col)
         {
             isReadyEffect = false;
-            Destroy(Instantiate(m_EffectGroundImpact, position, Quaternion.identity), 1.5f);
-            yield return new WaitForSeconds(effectCoolDown);
+            float lifeTime = effectCoolDown;
+            GameObject newImpactVFX = Instantiate(m_EffectGroundImpact, position, Quaternion.identity);
+            float initialScale = col.relativeVelocity.magnitude;
+            newImpactVFX.transform.localScale *= Mathf.Clamp (initialScale, 0.1f, .5f);
+            while (lifeTime > 0)
+            {
+                newImpactVFX.transform.localScale = Vector3.one * initialScale * Mathf.Lerp (0, initialScale, lifeTime);
+                
+                lifeTime -= Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+            Destroy(newImpactVFX);
             isReadyEffect = true;
         }
 
-        public IEnumerator TriggerWallImpactEffect(Vector3 position)
+        public IEnumerator TriggerWallImpactEffect(Vector3 position, Collision col)
         {
             isReadyEffect = false;
+            float initialScale = Mathf.Clamp (col.relativeVelocity.magnitude, 01f, .5f);
+            float lifeTime = effectCoolDown;
             System.Random rnd = new System.Random();
             int explosionIdx = rnd.Next(0, m_EffectExplosionCrash.Length);
-            Destroy(Instantiate (m_EffectExplosionCrash[explosionIdx], position, Quaternion.identity) , 1.5f);
-            yield return new WaitForSeconds(effectCoolDown);
+           
+            GameObject newImpactVFX = Instantiate(m_EffectExplosionCrash[explosionIdx], position, Quaternion.identity);
+           // newImpactVFX.transform.localScale *= 0.25f;
+            newImpactVFX.transform.localScale *= initialScale;
+            newImpactVFX.transform.LookAt(transform.position);
+            while (lifeTime > 0)
+            {
+                newImpactVFX.transform.localScale = Vector3.one * initialScale * Mathf.Lerp (0, initialScale, lifeTime);
+                lifeTime -= Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+
+            Destroy(newImpactVFX);
+       
             isReadyEffect = true;
         }
 
@@ -127,7 +152,10 @@ namespace BridgeEngine.Input
         {
             Animator animator = transform.Find("Car_Body").Find("Driver").GetComponent<Animator>();
             animator.SetTrigger("DriverEjectedTrigger");
-            Destroy(Instantiate(m_EffectExplosionBoom, position, Quaternion.identity), 1.5f);
+            GameObject newImpactVFX = Instantiate(m_EffectExplosionBoom, position, Quaternion.identity);
+            newImpactVFX.transform.localScale *= 0.5f;
+ 
+            Destroy (newImpactVFX, 2.5f);
         }
     }
 }
