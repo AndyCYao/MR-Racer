@@ -18,7 +18,7 @@ namespace Game
 
         public class TimeAllowanceSetting
         {
-            public const short C_StartTime = 120;
+            public const short C_StartTime = 15;
             public const short C_BaseTimeBonusMax = 20;
             public const short C_BaseTimeBonusMin = 5;
 

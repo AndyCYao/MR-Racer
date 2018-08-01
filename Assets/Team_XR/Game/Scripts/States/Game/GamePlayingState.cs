@@ -18,6 +18,12 @@ namespace Appl.State
            
             Game.GameManager. Instance.Game.Player.GetComponent<Rigidbody>().isKinematic = false;
 
+
+            //Game.GameManager.Instance.Game.Player
+                //.GetComponent<BridgeEngine.Input.CarControllerInput>()
+                //.SetAnimationBool("isDriverEjected", false);
+
+
             Checkpoint.CheckpointPassedEvent += CheckpointManager.Instance.OnCheckpointReached;
             m_Game.CheckPointCount = 0;
             base.OnStateEnter(animator, stateInfo, layerIndex);
