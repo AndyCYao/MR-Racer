@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: a3f7823892e2544be9d6c5c05a80d03e
+timeCreated: 1533155128
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: basic_rig Footsteps
+    100002: basic_rig Head
+    100004: Bip001 HeadNub
+    100006: Bip001 L Finger0Nub
+    100008: Bip001 L Finger1Nub
+    100010: Bip001 L Finger2Nub
+    100012: Bip001 R Finger0Nub
+    100014: Bip001 R Finger1Nub
+    100016: Bip001 R Finger2Nub
+    100018: Calf_L
+    100020: Calf_R
+    100022: Clavicle_L
+    100024: Clavicle_R
+    100026: Finger0_L
+    100028: Finger0_R
+    100030: Finger1_L
+    100032: Finger1_R
+    100034: Finger2_L
+    100036: Finger2_R
+    100038: Foot_L
+    100040: Foot_R
+    100042: Forearm_L
+    100044: Forearm_R
+    100046: Hand_L
+    100048: Hand_R
+    100050: left
+    100052: Man_Body
+    100054: Man_In_Car
+    100056: Man_Rig
+    100058: Neck
+    100060: Nub
+    100062: Nub 1
+    100064: Pelvis
+    100066: persp1
+    100068: Spine
+    100070: Spine_2
+    100072: Thigh_L
+    100074: Thigh_R
+    100076: Toe0_L
+    100078: Toe0_R
+    100080: top1
+    100082: UpperArm_L
+    100084: UpperArm_R
+    100086: //RootNode
+    400000: basic_rig Footsteps
+    400002: basic_rig Head
+    400004: Bip001 HeadNub
+    400006: Bip001 L Finger0Nub
+    400008: Bip001 L Finger1Nub
+    400010: Bip001 L Finger2Nub
+    400012: Bip001 R Finger0Nub
+    400014: Bip001 R Finger1Nub
+    400016: Bip001 R Finger2Nub
+    400018: Calf_L
+    400020: Calf_R
+    400022: Clavicle_L
+    400024: Clavicle_R
+    400026: Finger0_L
+    400028: Finger0_R
+    400030: Finger1_L
+    400032: Finger1_R
+    400034: Finger2_L
+    400036: Finger2_R
+    400038: Foot_L
+    400040: Foot_R
+    400042: Forearm_L
+    400044: Forearm_R
+    400046: Hand_L
+    400048: Hand_R
+    400050: left
+    400052: Man_Body
+    400054: Man_In_Car
+    400056: Man_Rig
+    400058: Neck
+    400060: Nub
+    400062: Nub 1
+    400064: Pelvis
+    400066: persp1
+    400068: Spine
+    400070: Spine_2
+    400072: Thigh_L
+    400074: Thigh_R
+    400076: Toe0_L
+    400078: Toe0_R
+    400080: top1
+    400082: UpperArm_L
+    400084: UpperArm_R
+    400086: //RootNode
+    2000000: left
+    2000002: persp1
+    2000004: top1
+    4300000: Man_Body
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Man_Body
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 319204d8bc5fd437ca57db485c15de08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face
+    second: {fileID: 2100000, guid: f5ace59ea98174639a0ebbcb9f4b189d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

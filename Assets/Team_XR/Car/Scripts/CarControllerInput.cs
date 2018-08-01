@@ -34,11 +34,16 @@ namespace BridgeEngine.Input
         bool isReadyEffect = true;
         float effectCoolDown = 1.5f;
 
+
+        public GameObject m_CarVisibility;
+
         protected void Awake()
         {
             m_CarController = GetComponent<UnityStandardAssets.Vehicles.Car.CarController>();
             m_CarMotionData = new CarMotionData();
             //m_Explosion = transform.Find("CartoonBoom_V2").gameObject;
+
+            m_CarVisibility = transform.Find("Car_Body").gameObject;
 
             beUnity = BridgeEngineUnity.main;
             if (beUnity)
@@ -157,5 +162,12 @@ namespace BridgeEngine.Input
  
             Destroy (newImpactVFX, 2.5f);
         }
+
+        public void SetAnimationBool(string animationName, bool newBool)
+        {
+            Animator animator = transform.Find("Driver").GetComponent<Animator>();
+            animator.SetBool(animationName, newBool);
+        }
+
     }
 }
