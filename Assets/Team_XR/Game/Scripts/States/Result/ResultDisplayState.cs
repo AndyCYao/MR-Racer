@@ -29,6 +29,14 @@ namespace Appl.State
             UIManager.Instance.GetUIComponent("ButtonsPanel").gameObject.SetActive(true);
         }
 
+        public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    
+        {
+            if (Input.GetMouseButtonUp(0)){
+                 m_Animator.SetInteger("State", 1);
+            }
+            base.OnStateEnter(animator, stateInfo, layerIndex);
+        }
         public override void OnControllerButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
         {
             if (down == BEControllerButtons.ButtonPrimary)
