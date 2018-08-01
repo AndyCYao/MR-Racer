@@ -156,7 +156,7 @@ namespace BridgeEngine.Input
         public void TriggerGameOverBoomEffect(Vector3 position)
         {
 
-            Animator animator = transform.Find("Car_Body").Find("Driver").GetComponent<Animator>();
+            Animator animator = transform.Find("Driver").GetComponent<Animator>();
             animator.SetTrigger("DriverEjectedTrigger");
             GameObject newImpactVFX = Instantiate(m_EffectExplosionBoom, position, Quaternion.identity);
             newImpactVFX.transform.localScale *= 0.5f;
