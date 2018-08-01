@@ -77,6 +77,10 @@ public class CheckpointManager : MonoBehaviour
     public void OnCheckpointReached (int index) {
         Debug.Log(string.Format("CheckpointManager - OnCheckpointReached: {0}", index));
         //  checkPointObject.transform.position = CustomRaycasting.RayCastToScene(transform.position);
+        Game.GameManager.Instance.Game.Player
+                        .GetComponent<BridgeEngine.Input.CarControllerInput>()
+                        .SetAnimationBool("isPlayCheckpointAnimation", true);
+        
         StartCoroutine(MakeNewCheckpoint(CustomRaycasting.RayCastToScene(transform.position)));
     
         Debug.Log(string.Format("New checkpoint spawned at {0}", checkPointObject.transform.position.ToString()));
@@ -99,6 +103,10 @@ public class CheckpointManager : MonoBehaviour
             checkPointObject.position = Vector3.Lerp(oldPosition, newCheckpointPosition, currentTimePassSinceTransition / transittingTime);
             yield return new WaitForEndOfFrame();
         }
+
+        Game.GameManager.Instance.Game.Player
+                        .GetComponent<BridgeEngine.Input.CarControllerInput>()
+                        .SetAnimationBool("isPlayCheckpointAnimation", false);
 
         Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
     }
