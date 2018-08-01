@@ -23,7 +23,7 @@ namespace Appl.State
                                                    Game.GameManager.Instance.Game.CheckPointCount
 
                                                    );
-            uiMessagePanel.m_Content.text = "Try again for only $2.99?";
+            uiMessagePanel.m_Content.text = "Do you like to play again?";
 
 
             UIManager.Instance.GetUIComponent("ButtonsPanel").gameObject.SetActive(true);

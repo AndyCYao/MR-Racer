@@ -20,7 +20,7 @@ namespace Appl.State
             UIManager.Instance.GetUIComponent("MessagePanel").gameObject.SetActive(true);
 
             uiMessagePanel.m_Title.text = "HOW TO PLAY";
-            uiMessagePanel.m_Content.text = "Hit as many checkpoints as can,\nbefore the time runs out.";
+            uiMessagePanel.m_Content.text = "Hit as many checkpoints as you can\nbefore the time runs out.";
             uiMessagePanel.m_UITextDescription.gameObject.SetActive(false);
             uiMessagePanel.m_Figure.gameObject.SetActive(false);
 
