@@ -33,7 +33,7 @@ namespace Appl.State
         {
             if (Input.GetMouseButtonUp(0))
             {
-                animator.SetInteger("SubState", 0);
+           
                 animator.SetInteger("State", 1);
             }
         }
@@ -43,7 +43,7 @@ namespace Appl.State
             if (current == BEControllerButtons.ButtonPrimary)
             {
 
-                m_Animator.SetInteger("SubState", 0);
+      
                 m_Animator.SetInteger("State", 1);
             }
 

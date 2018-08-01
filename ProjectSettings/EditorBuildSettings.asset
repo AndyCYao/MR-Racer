@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Team_XR/Scenes/Test.unity
     guid: 48a5f25b77e0d4832aa815377d5d4001
+  - enabled: 1
+    path: Assets/Team_XR/Scenes/TestWUI.unity
+    guid: f7cc76913e1074a47ae11033d28f5079

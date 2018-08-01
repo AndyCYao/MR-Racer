@@ -7,9 +7,13 @@ namespace BridgeEngine.Input
     public class CarControllerInput : MonoBehaviour
     {
         const float c_MinimumRotationMargin = 2f;
+        const float C_DeadZone = 0.25f;
+
+        [SerializeField] protected float m_ThrustPower = 4;
+        [SerializeField] protected float m_RotatePower = 3;
 
         protected UnityStandardAssets.Vehicles.Car.CarController m_CarController;
-        BridgeEngineUnity beUnity;
+        protected BridgeEngineUnity beUnity;
 
         [Serializable]
         protected class CarMotionData
@@ -109,11 +113,8 @@ namespace BridgeEngine.Input
             isReadyEffect = true;
         }
 
-
-        public IEnumerator TriggerWallImpactEffect(Vector3 position){
-
-        
-
+        public IEnumerator TriggerWallImpactEffect(Vector3 position)
+        {
             isReadyEffect = false;
             System.Random rnd = new System.Random();
             int explosionIdx = rnd.Next(0, m_EffectExplosionCrash.Length);
@@ -122,12 +123,10 @@ namespace BridgeEngine.Input
             isReadyEffect = true;
         }
 
-
         public void TriggerGameOverBoomEffect(Vector3 position)
         {
             Animator animator = transform.Find("Car_Body").Find("Driver").GetComponent<Animator>();
             animator.SetTrigger("DriverEjectedTrigger");
-
             Destroy(Instantiate(m_EffectExplosionBoom, position, Quaternion.identity), 1.5f);
         }
     }
