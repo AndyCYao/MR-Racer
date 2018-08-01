@@ -9,8 +9,8 @@ namespace BridgeEngine.Input
         const float c_MinimumRotationMargin = 2f;
         const float C_DeadZone = 0.25f;
 
-        [SerializeField] protected float m_ThrustPower;
-        [SerializeField] protected float m_RotatePower;
+        [SerializeField] protected float m_ThrustPower = 4;
+        [SerializeField] protected float m_RotatePower = 3;
 
         protected UnityStandardAssets.Vehicles.Car.CarController m_CarController;
         protected BridgeEngineUnity beUnity;
