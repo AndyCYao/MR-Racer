@@ -35,29 +35,16 @@ namespace BridgeEngine.Input
                 m_CarMotionData.motorTorque = 0;
             }
 
-            if (current == (BEControllerButtons.ButtonPrimary | BEControllerButtons.ButtonSecondary))
+            if (down == BEControllerButtons.ButtonSecondary)
             {
-
-                if (down == BEControllerButtons.ButtonSecondary
-                && Mathf.Approximately(resetConfirmTime, -1))
-                {
                     Debug.Log("CarControllerInput_A - OnControllerButton: Reset button sequence being pressed!");
                     resetConfirmTime = 0;
                     StartCoroutine(CheckButtonHold());
-                }
-
-
             }
 
             // New design, pressing the secondary button will reset the car
             if (up == BEControllerButtons.ButtonSecondary)
             {
-
-                if (resetConfirmTime > 1)
-                {
-                    Debug.Log(string.Format("CarControllerInput_A - OnControllerButton: Reset Vehicle!"));
-                    SpawnPlayerRandomly();
-                }
                 resetConfirmTime = -1;
             }
 
@@ -95,9 +82,8 @@ namespace BridgeEngine.Input
             if (!Mathf.Approximately(resetConfirmTime, -1))
             {
                 resetConfirmTime = -1;
-                SpawnPlayerRandomly();
+                CheckpointManager.Instance.Reset();
             }
-
         }
     }
 }

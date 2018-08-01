@@ -46,15 +46,17 @@ public class CheckpointManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        BEScene.OnEnvironmentMeshCreated += Reset;
+        BEScene.OnEnvironmentMeshCreated += () => { Reset(true); };
 
         checkPointObject = transform.Find("Checkpoint");
   
     }
 
-	private void Reset()
+	public void Reset(bool isResetSubscription=false)
 	{
-        Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
+        if (isResetSubscription)
+            Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
+    
         //BridgeEngineUnity.main.onControllerButtonEvent.AddListener(OnControllerButton);
 
         SpawnPlayerRandomly();
