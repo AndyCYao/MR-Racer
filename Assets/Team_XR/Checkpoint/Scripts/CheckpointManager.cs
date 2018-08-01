@@ -46,64 +46,24 @@ public class CheckpointManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        BEScene.OnEnvironmentMeshCreated += Reset;
+        BEScene.OnEnvironmentMeshCreated += () => { Reset(true); };
 
         checkPointObject = transform.Find("Checkpoint");
   
     }
 
-	private void Reset()
+	public void Reset(bool isResetSubscription=false)
 	{
-        
-        BridgeEngineUnity.main.onControllerButtonEvent.AddListener(OnControllerButton);
-
+        if (isResetSubscription)
+            Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
+    
+        //BridgeEngineUnity.main.onControllerButtonEvent.AddListener(OnControllerButton);
 
         SpawnPlayerRandomly();
         checkPointObject.transform.position = CustomRaycasting.RayCastToScene(transform.position);
 
 	}
 
-    [SerializeField]
-    float confirmTime = -1;
-    private void OnControllerButton(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up) { 
-        
-
-        if (current == (BEControllerButtons.ButtonPrimary | BEControllerButtons.ButtonSecondary)) {
-
-            if ((down == BEControllerButtons.ButtonPrimary || down == BEControllerButtons.ButtonSecondary)
-            && Mathf.Approximately(confirmTime, -1))
-            {
-                Debug.Log("CheckpointManager - OnControllerButton: Reset button sequence being pressed!");
-                confirmTime = 0;
-                StartCoroutine(CheckButtonHold());
-            }
-
-
-        }
-
-        if (up == BEControllerButtons.ButtonPrimary || up == BEControllerButtons.ButtonSecondary) {
-            
-            if (confirmTime > 1)
-            {
-                Debug.Log(string.Format("CheckpointManager - OnControllerButton: Reset Vehicle!"));
-                SpawnPlayerRandomly();
-            }
-            confirmTime = -1;
-        }
-    }
-
-    IEnumerator CheckButtonHold() {
-        
-        while (confirmTime >= 0 && confirmTime < 1) {
-            confirmTime += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
-        }
-        if (!Mathf.Approximately(confirmTime, -1)){
-            confirmTime = -1;
-            SpawnPlayerRandomly();
-        }
-
-    }
 
     private void SpawnPlayerRandomly()
     {
