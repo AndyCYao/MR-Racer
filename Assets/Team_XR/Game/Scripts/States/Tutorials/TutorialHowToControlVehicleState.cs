@@ -31,11 +31,13 @@ namespace Appl.State
 
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            base.OnStateUpdate(animator, stateInfo, layerIndex);
             if (Input.GetMouseButtonUp(0))
             {
            
                 animator.SetInteger("State", 1);
             }
+
         }
 
         public override void OnControllerButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)

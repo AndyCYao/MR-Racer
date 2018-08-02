@@ -30,5 +30,14 @@ namespace Appl.State
         {
 
         }
-    }
+
+        public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+            BETrackerPoseAccuracy poseStatus =  BridgeEngineUnity.main.TrackerPoseAccuracy();
+            if (poseStatus == BETrackerPoseAccuracy.NotAvailable) {
+                Appl.UI.UIManager.Instance.GetComponent<Canvas>().enabled = false;
+            }
+            else {
+                Appl.UI.UIManager.Instance.GetComponent<Canvas>().enabled = true;
+            }
+        }
 }
