@@ -21,6 +21,8 @@ namespace Appl.State
 
             uiMessagePanel.m_Title.text = "HOW TO PLAY";
             uiMessagePanel.m_Content.text = "Hit as many checkpoints as you can\nbefore the time runs out.";
+            //uiMessagePanel.m_Content.text = "私は巨大な卵です.";
+
             uiMessagePanel.m_UITextDescription.gameObject.SetActive(false);
             uiMessagePanel.m_Figure.gameObject.SetActive(false);
 

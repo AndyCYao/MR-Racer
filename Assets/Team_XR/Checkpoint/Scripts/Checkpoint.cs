@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour {
     public int index;
+    [SerializeField]
     bool isHit = false;
 
     public delegate void CheckpointPassed (int index);
@@ -13,7 +14,7 @@ public class Checkpoint : MonoBehaviour {
 	{
         if (other.CompareTag("Player") && !isHit )
         {
-           // isHit = true;
+            Enable(true);
 
             CheckpointPassedEvent(index);
            // transform.position = CustomRaycasting.RayCastToScene(CheckpointManager.
@@ -27,8 +28,9 @@ public class Checkpoint : MonoBehaviour {
 
     }
 
-    void OnEnable () {
-        isHit = false;
+
+    public void Enable (bool isEnable) {
+        isHit = isEnable;
     }
 
     IEnumerator Deactivate()

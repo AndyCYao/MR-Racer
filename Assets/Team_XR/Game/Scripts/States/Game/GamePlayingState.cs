@@ -24,7 +24,7 @@ namespace Appl.State
                 //.SetAnimationBool("isDriverEjected", false);
 
 
-            Checkpoint.CheckpointPassedEvent += CheckpointManager.Instance.OnCheckpointReached;
+            //Checkpoint.CheckpointPassedEvent += CheckpointManager.Instance.OnCheckpointReached;
             m_Game.CheckPointCount = 0;
             base.OnStateEnter(animator, stateInfo, layerIndex);
         }
@@ -32,8 +32,8 @@ namespace Appl.State
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-           
 
+            base.OnStateUpdate(animator, stateInfo, layerIndex);
 
 
         }
@@ -47,7 +47,7 @@ namespace Appl.State
 		public override void OnStateMachineExit(Animator animator, int stateMachinePathHash)
 		{
             base.OnStateMachineExit(animator, stateMachinePathHash);
-            Checkpoint.CheckpointPassedEvent -= CheckpointManager.Instance.OnCheckpointReached;
+           // Checkpoint.CheckpointPassedEvent -= CheckpointManager.Instance.OnCheckpointReached;
 		}
 	}
 }

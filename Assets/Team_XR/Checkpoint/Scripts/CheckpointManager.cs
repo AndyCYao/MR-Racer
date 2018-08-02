@@ -47,7 +47,7 @@ public class CheckpointManager : MonoBehaviour
         }
 
         BEScene.OnEnvironmentMeshCreated += () => { Reset(true); };
-
+        Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
         checkPointObject = transform.Find("Checkpoint");
   
     }
@@ -55,8 +55,10 @@ public class CheckpointManager : MonoBehaviour
 	public void Reset(bool isResetSubscription=false)
 	{
         if (isResetSubscription)
-            Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
-    
+        {
+           
+
+        }
         //BridgeEngineUnity.main.onControllerButtonEvent.AddListener(OnControllerButton);
 
         SpawnPlayerRandomly();
@@ -96,7 +98,7 @@ public class CheckpointManager : MonoBehaviour
             Game.GameManager.Instance.Game.CheckPointCount, Vector3.Distance(oldPosition, newCheckpointPosition));
 
         Game.GameManager.Instance.Game.CheckPointCount++;
-        Checkpoint.CheckpointPassedEvent -= OnCheckpointReached;
+      //  Checkpoint.CheckpointPassedEvent -= OnCheckpointReached;
         while (currentTimePassSinceTransition < transittingTime)
         {
             currentTimePassSinceTransition += Time.deltaTime;
@@ -107,8 +109,9 @@ public class CheckpointManager : MonoBehaviour
         Game.GameManager.Instance.Game.Player
                         .GetComponent<BridgeEngine.Input.CarControllerInput>()
                         .SetAnimationBool("isPlayCheckpointAnimation", false);
-
-        Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
+        //Game.GameManager.Instance.Game.CheckPointCount
+        checkPointObject.GetComponent<Checkpoint>().Enable(false);
+    //    Checkpoint.CheckpointPassedEvent += OnCheckpointReached;
     }
 
 }
