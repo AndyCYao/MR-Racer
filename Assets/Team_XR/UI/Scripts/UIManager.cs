@@ -26,6 +26,8 @@ namespace Appl.UI
             }
             s_Instance = this;
 
+            transform.localPosition = new Vector3 (0,0,
+                (BridgeEngineUnity.main.isStereoModeActive) ?  0.35f : .32f);
             m_UIComponentsHash = new Dictionary<string, int>();
             m_UIComponentsArray = GetComponentsInChildren<UI.UIComponent>();
             for (int i = 0; i < m_UIComponentsArray.Length; i++)

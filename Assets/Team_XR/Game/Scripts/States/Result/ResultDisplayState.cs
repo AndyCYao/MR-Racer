@@ -35,7 +35,7 @@ namespace Appl.State
             if (Input.GetMouseButtonUp(0)){
                  m_Animator.SetInteger("State", 1);
             }
-            base.OnStateEnter(animator, stateInfo, layerIndex);
+            base.OnStateUpdate(animator, stateInfo, layerIndex);
         }
         public override void OnControllerButtonEvent(BEControllerButtons current, BEControllerButtons down, BEControllerButtons up)
         {

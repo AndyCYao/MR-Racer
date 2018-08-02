@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 136791824480412186}
   - component: {fileID: 114068028881324030}
   m_Layer: 0
-  m_Name: Tornado
+  m_Name: Tornado.wScripts.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ Transform:
   m_GameObject: {fileID: 1001533377969864}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.3, y: 0.15, z: 0.3}
   m_Children:
   - {fileID: 4366274306276616}
   - {fileID: 4431377603401478}
@@ -223,7 +223,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 239528644
+  randomSeed: -1212672034
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3584,7 +3584,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1663108149
+  randomSeed: 232074084
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6978,7 +6978,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1415961697
+  randomSeed: -505017370
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7067,8 +7067,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.6102941, g: 0.6102941, b: 0.6102941, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.872}
+      minColor: {r: 0.6102941, g: 0.6102941, b: 0.6102941, a: 0.359}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.397}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -10339,7 +10339,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 281185197
+  randomSeed: -181732375
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10428,8 +10428,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8088235, g: 0.8088235, b: 0.8088235, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.828}
+      minColor: {r: 0.8088235, g: 0.8088235, b: 0.8088235, a: 0.059}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.384}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
