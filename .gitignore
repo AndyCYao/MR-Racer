@@ -5,6 +5,9 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+#Ignore all the .occ files because they are captured from structural sensor
+*.occ
+
 # Visual Studio cache directory
 .vs/
 .vsCode/
