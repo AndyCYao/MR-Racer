@@ -3,17 +3,17 @@ using System.Collections;
 
 public class CustomRaycasting 
 {
-	
+    const  int s_MaxRaycastingTrials = 100;
 
-   public static Vector3 RayCastToScene (Vector3 origin) {
+    public static Vector3 RayCastToScene (Vector3 origin) {
 
 
         RaycastHit hit;
         Ray ray = new Ray();
         ray.origin = origin;
-
+        float trialsCount = 0;
         // bool hasCreated = false;
-        while (true)
+        while (trialsCount < s_MaxRaycastingTrials)
         {
             ray.direction = Random.onUnitSphere;
             ray.direction = new Vector3(
@@ -35,6 +35,9 @@ public class CustomRaycasting
 
                 }
             }
+            trialsCount++;
         }
+        Debug.LogWarning("[CustomRayCasting.cs]: Raycasting to scene failed: No present mesh in the scene with layer 'Platform'");
+        return Vector3.zero;
     }
 }
