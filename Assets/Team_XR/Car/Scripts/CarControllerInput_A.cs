@@ -1,4 +1,6 @@
-#define ORIENTATIONROTATIONCONTROL
+/* This controller uses the DPAD for navigation. 
+ * and secondary button for resetting the car placement. 
+ */
 
 using UnityEngine;
 using System.Collections;

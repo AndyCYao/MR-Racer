@@ -1,3 +1,8 @@
+/* This is base class of the various remote controller schemes. It includes
+ * the handling of special effects like crashing against the wall, hitting the 
+ * floor. 
+ * 
+ */
 using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;

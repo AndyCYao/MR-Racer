@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-/*
- * Trigger Button as Acceleration
- * Secondary Button as Break
- * D-pad as direction
+/* This controller uses the DPAD for steering
+ * primary button for torque
+ * and secondary button for brake.
  */
+
 
 namespace BridgeEngine.Input{
     public class CarControllerInput_C : CarControllerInput
