@@ -110,7 +110,7 @@ UI Popup is shown displaying the number of checkpoint reached during the last ga
 Since collecting checkpoints gets boring soon, there are obstacles to increase the increase the stake of the game. Current obstacles implemented include:
 
 ####Checkpoint
-<img src = "documentation/Checkpoint.png" width=350 alignment="center">
+<img src = "documentation/checkpoint.png" width=350 alignment="center">
 
 Checkpoint is spawn randomly on the scanned environment using `CustomRaycasting.RaycastOnScene()`. Due to the limited amount of space a typical environment scan is, only one checkpoint is spawned at a time. `Checkpoint` object has a trigger `Collider` to detect the player. `OnTriggerEnter`, chekpoint behavior script throws an event that alert `CheckpointManager` which then process and relocate the checkpoint to the new assigned position.
 
