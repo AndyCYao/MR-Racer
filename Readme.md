@@ -43,7 +43,7 @@ __DriverEjected__ - this state is triggered by the above `TriggerGameOverBoomEff
 __DriverHitCheckpoint__ - this state launches a celebratory fist animation when the car hits a checkpoint.
 
 
-![chilling](documentation/checkpoint.png)
+![chilling](documentation/checkpointCelebration.png)
 
 #### Skid trails
 The skid trails are particle systems included as part of the standard car assets.
