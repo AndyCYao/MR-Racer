@@ -16,17 +16,33 @@ Structural Sensor
 ### Special Effects
 In `CarControllerInput` base class, the `TriggerGroundImpactEffect`, `TriggerWallImpactEffect`, and `TriggerGameOverBoomEffect` coroutines handle the special effects.
 
-`TriggerGroundImpactEffect`  is triggered when the car land on the floor from a jump, referenced by `OnCollisionEnter` 
+* `TriggerGroundImpactEffect`  is triggered when the car land on the floor from a jump, referenced by `OnCollisionEnter` 
 
-`TriggerWallImpactEffect` is triggered when the car hits a wall. A collision is a wall hit if the difference between the `collision.contacts[0].normal` and `Vector3.up` is less than 10f. referenced by `OnCollisionEnter`.
-
-We created three wall impact prefabs, so this coroutine randomlly choose an effect on collision.
+* `TriggerWallImpactEffect` is triggered when the car hits a wall. A collision is a wall hit if the difference between the `collision.contacts[0].normal` and `Vector3.up` is less than 10f. referenced by `OnCollisionEnter`. We created three wall impact prefabs, so this coroutine randomlly choose an effect on collision.
 
 
-`TriggerGameOverBoomEffect` is triggered when the game runs out of time. This coroutine is referenced by `GameOverState` class `OnStateEnter`
+* `TriggerGameOverBoomEffect` is triggered when the game runs out of time. it launches the driver ejected animation. This coroutine is referenced by `GameOverState` class `OnStateEnter`
 method. 
 
 The effects are stored in `Assets/Team_XR/Sean_VFX`, and are prefabs in the `CarControllerInput` base class.
+
+### Driver Animation
+A driver animator is attached to the driver prefab. the various states are activated by `isDriverEjected` and `isPlayCheckpointAnimation` boolean. 
+
+![Driver Animator Diagram](documentation/driverAnimator.png)
+
+__Chillling__ - this is the main state, driver is just driving. 
+
+![chilling](documentation/chilling.png)
+
+__DriverEjected__ - this state is triggered by the above `TriggerGameOverBoomEffect`
+
+![chilling](documentation/ejected.png)
+
+__DriverHitCheckpoint__ - this state launches a celebratory fist animation when the car hits a checkpoint.
+
+
+![chilling](documentation/checkpoint.png)
 
 
 ### Car
