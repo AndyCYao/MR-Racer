@@ -14,12 +14,27 @@ Structural Sensor
 ## Technical notes
 
 ### Special Effects
-Special effects are triggered when the car hit a wall, land on the floor from a jump, or just run out of time. The effects are prefabs in the `CarControllerInput` base class. The prefabs are stored in `Assets/Team_XR/Sean_VFX`
+In `CarControllerInput` base class, the `TriggerGroundImpactEffect`, `TriggerWallImpactEffect`, and `TriggerGameOverBoomEffect` coroutines handle the special effects.
+
+`TriggerGroundImpactEffect`  is triggered when the car land on the floor from a jump, referenced by `OnCollisionEnter` 
+
+`TriggerWallImpactEffect` is triggered when the car hits a wall. A collision is a wall hit if the difference between the `collision.contacts[0].normal` and `Vector3.up` is less than 10f. referenced by `OnCollisionEnter`.
+
+We created three wall impact prefabs, so this coroutine randomlly choose an effect on collision.
+
+
+`TriggerGameOverBoomEffect` is triggered when the game runs out of time. This coroutine is referenced by `GameOverState` class `OnStateEnter`
+method. 
+
+The effects are stored in `Assets/Team_XR/Sean_VFX`, and are prefabs in the `CarControllerInput` base class.
+
 
 ### Car
-The car controller is a Unity standard vehicle asset. We modified the input method to fit for the Bridge headset remote control.
+We used the [low poly stylized car](https://assetstore.unity.com/packages/3d/vehicles/land/low-poly-stylized-cars-116415) and [character pack](https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870) for our car and driver. "Underneath the hood", the car engine is a Unity standard vehicle asset and originally uses `CrossPlatformInput` for inputs. We modified the input method to fit for the Bridge headset remote control.  
 
 ### Controller
+The `CarControllerInput` contains a `CarMotionData` class used for steering and power. The car's movement is updated by the `FixedUpdate` method
+
 We have three controller styles available. 
 
 `ControllerInputA` -uses DPAD for steering. Acceleration and braking is based on where you are pressing on DPAD relative to the center, hold the secondary buttons to reset
