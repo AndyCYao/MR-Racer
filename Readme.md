@@ -12,6 +12,10 @@ Mixed Reality Racer is a driving game where you utilize Occipital’s Bridge to 
 - Ocipital Bridge Headset compatible with the iPhone generation in possession
 - Ocipital's Bridge Remote Control.
 
+## Project structure
+We attempt to keep our work separated from the imported packages. Within our work folder, we separate raw assets created by the artists from implemented features. The structure diagram is as follow:
+<img src = "documentation/ProjectStructure.png" width=650 alignment="center">
+
 ## Technical notes
 
 ### Special Effects
@@ -27,7 +31,16 @@ method.
 
 The effects are stored in `Assets/Team_XR/Sean_VFX`, and are prefabs in the `CarControllerInput` base class.
 
-### Driver Animation
+### Engine smoke particles
+The car also has engine smoke attached to it. The prefab is located in `TeamXR/Thatlita's Particle`.
+### Car
+We use [CharacterPackSample](https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870) for our car and driver. "Underneath the hood", the car engine is a Unity standard vehicle asset and originally uses `CrossPlatformInput` for inputs. We modified the input method to fit for the Bridge headset remote control.
+
+#### Car mechanics
+We used the [low poly stylized car](https://assetstore.unity.com/packages/3d/vehicles/land/low-poly-stylized-cars-116415), replacing our desired mesh and customized certain fields of the `Assets/StandardAssets/Vehicles/Car/Scripts/CarController`, mainly resizing `WheelColliders`.
+
+#### Driver Animation
+We used an existing asset in Unityu store[character pack](https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870) for our car and driver. "Underneath the hood", the car engine is a Unity standard vehicle asset and originally uses `CrossPlatformInput` for inputs. We modified the input method to fit for the Bridge headset remote control.
 A driver animator is attached to the driver prefab. the various states are activated by `isDriverEjected` and `isPlayCheckpointAnimation` boolean. 
 
 ![Driver Animator Diagram](documentation/driverAnimator.png)
@@ -45,17 +58,34 @@ __DriverHitCheckpoint__ - this state launches a celebratory fist animation when 
 
 ![chilling](documentation/checkpointCelebration.png)
 
-#### Skid trails
-The skid trails are particle systems included as part of the standard car assets.
 
-### Engine smoke particles
-The car also has engine smoke attached to it. Which is a part of the  standard car access.
+#### Controller
+The `CarControllerInput` contains a `CarMotionData` object which has 2 fields: `steering` and `motorTorque`. The car's movement is updated by the `FixedUpdate` method.
 
-### Car
-We used the [low poly stylized car](https://assetstore.unity.com/packages/3d/vehicles/land/low-poly-stylized-cars-116415) and [character pack](https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870) for our car and driver. "Underneath the hood", the car engine is a Unity standard vehicle asset and originally uses `CrossPlatformInput` for inputs. We modified the input method to fit for the Bridge headset remote control.
+The CarControllerInput is subscribed to `BridgeEngineUnity` following events:
+`OnMotionEvent(Vector3 position, Quaternion rotation)` - Thrown when the remote control is moved.
+`OnButtonEvent(int current, int down, in up) - Update status of each button, each button takes a bit in the integer (0 - off, 1 - on)
+```
+[Flags]
+public enum BEControllerButtons : int {
+    ButtonPrimary   = 1<<0, // Trigger pulled or CODAWheel clicker
+    ButtonSecondary = 1<<1, // App button with (•••)
+    ButtonHomePower = 1<<2, // Home/Power button with (o)
+    ButtonTouchpad     = 1<<3, // Touch pad clicker pressed
+    ButtonTouchContact = 1<<4, // Touch pad contact with finger
+}
+```
+`OnTouchEvent (Vector2 position, BEButtonStatus touchStatus)
+Update when the player's finger is on the touchpad, the parameter position of the touch, each axis component is ranged from [-1,1]. The parameter `touchStatus` returns the status of the touch:
+```
+public enum BEControllerTouchStatus : int {
+    TouchIdle = 0,
+    TouchFirstContact = 1,
+    TouchReleaseContact = 2,
+    TouchMove = 3
+}
+```
 
-### Controller
-The `CarControllerInput` contains a `CarMotionData` object which has 2 fields: `steering` and `motorTorque`. The car's movement is updated by the `FixedUpdate` method
 
 We have three controller styles available. 
 
@@ -87,7 +117,6 @@ Each Main state has its own substates to handle different behaviors within that 
 Currently, main state transition is activated by integer parameter `State` while substate is activated mainly using trigger `NextSubState`.
 
 #### Tutorial
-Class `TutorialState`.
 
 The car's `RigidBody` Component is set to `isKinematic`, turning off all physical interaction and the player cannot move the car. An UI Popup is shown to instruct player how to play the game.
 
@@ -97,22 +126,28 @@ Big countdown text is shown as the player prepares themselves to enter the game.
 
 #### Game
 Controls the game component of the app.
-##### GamePlaying
-The car's physic is on and the player can control the car. The UI showing `RemainingTime` and `CheckpointCount` to show the player's progress.
 
-#####GameOver
-Car's physic is disabled, a text says "GameOver". After a few seconds, proceed to __Result__ State.
+##### GameBeginState
+Turns on visual UI for `TimeRemaining` and `CheckpointCount`. Future behaviors including animations right before the game starts can be added here. Proceeds to __GamePlayingState__ immediately.
+##### GamePlayingState
+The car's physic is on and the player can control the car. The UI showing `RemainingTime` and `CheckpointCount` to show the player's progress. Proceeds to __GameOverState__ once the game is over.
 
-###Result
-UI Popup is shown displaying the number of checkpoint reached during the last game. Proceeds to __Countdown__ state once the user press the Trigger button.
+##### GameOverState
+Car's physic is disabled, a text says "GameOver". After a few seconds, proceed to __ResultState__.
+
+#### ResultState
+UI Popup is shown displaying the number of checkpoint reached during the last game. Proceeds to __CountdownState__ state once the user press the Trigger button.
 
 ### Obstacles
 Since collecting checkpoints gets boring soon, there are obstacles to increase the increase the stake of the game. Current obstacles implemented include:
 
 #### Checkpoint
 <img src = "documentation/checkpoint.png" width=350 alignment="center">
-
+##### Position spawning
 Checkpoint is spawn randomly on the scanned environment using `CustomRaycasting.RaycastOnScene()`. Due to the limited amount of space a typical environment scan is, only one checkpoint is spawned at a time. `Checkpoint` object has a trigger `Collider` to detect the player. `OnTriggerEnter`, chekpoint behavior script throws an event that alert `CheckpointManager` which then process and relocate the checkpoint to the new assigned position.
+
+##### Time extension
+Player can prolong their game time by reaching the assigned checkpoint as soon as possible. The time awarded is based on the distance between the current and previous checkpoints. This is not completely balanced and can be edited in `Game.TimeAllowanceSettings`
 
 Files related to checkpoint is in `Asset/TeamXR/Checkpoint`
 #### Tornado
@@ -156,6 +191,6 @@ Possible solutions include:
 
 * Manni Zhang - 3D Artist
 
-## Acknowledgments
+## Partnership Acknowledgments
 * Aaron Hilton at https://steampunk.digital/ 
-* Jacob Ervin
+* Jacob Ervin at https://occipital.com/
