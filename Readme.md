@@ -34,14 +34,13 @@ The effects are stored in `Assets/Team_XR/Sean_VFX`, and are prefabs in the `Car
 ### Engine smoke particles
 The car also has engine smoke attached to it. The prefab is located in `TeamXR/Thatlita's Particle`.
 ### Car
-We use [CharacterPackSample](https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870) for our car and driver. "Underneath the hood", the car engine is a Unity standard vehicle asset and originally uses `CrossPlatformInput` for inputs. We modified the input method to fit for the Bridge headset remote control.
+The car engine is a Unity standard vehicle asset and originally uses `CrossPlatformInput` for inputs. We modified the input method to fit for the Bridge headset remote control.
 
 #### Car mechanics
 We used the [low poly stylized car](https://assetstore.unity.com/packages/3d/vehicles/land/low-poly-stylized-cars-116415), replacing our desired mesh and customized certain fields of the `Assets/StandardAssets/Vehicles/Car/Scripts/CarController`, mainly resizing `WheelColliders`.
 
 #### Driver Animation
-We used an existing asset in Unityu store[character pack](https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870) for our car and driver. "Underneath the hood", the car engine is a Unity standard vehicle asset and originally uses `CrossPlatformInput` for inputs. We modified the input method to fit for the Bridge headset remote control.
-A driver animator is attached to the driver prefab. the various states are activated by `isDriverEjected` and `isPlayCheckpointAnimation` boolean. 
+We used an existing asset in Unity store [character pack](https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870)  for our car and driver. A driver animator is attached to the driver prefab. the various states are activated by `isDriverEjected` and `isPlayCheckpointAnimation` boolean. 
 
 ![Driver Animator Diagram](documentation/driverAnimator.png)
 
@@ -51,12 +50,12 @@ __Chillling__ - this is the main state, driver is just driving.
 
 __DriverEjected__ - this state is triggered by the above `TriggerGameOverBoomEffect`
 
-![chilling](documentation/ejected.png)
+![ejected](documentation/ejected.png)
 
 __DriverHitCheckpoint__ - this state launches a celebratory fist animation when the car hits a checkpoint.
 
 
-![chilling](documentation/checkpointCelebration.png)
+![celebration](documentation/checkpointCelebration.png)
 
 
 #### Controller
@@ -102,7 +101,7 @@ The default is ControllerInputA, to switch controllers, remove the current contr
 ### Game flow
 The app is controlled by `GameManager` object. It has an Unity `AnimatorController` attached to it to control its states. The controller directory is: `Assets/TeamXR/Game/GameStateMachine.controller`
 
-Each state is a derived of Unity `StateMachineBehavior`. We overrides 3 function of the class that can be override:`OnStateEnter`, `OnStateUpdate`. `OnStateExit`. Each main state class can have its own derived class for each substate.
+Each state is derived from Unity `StateMachineBehavior`. We overrided the 3 overridable functions of the class:`OnStateEnter`, `OnStateUpdate`. `OnStateExit`. Each main state class can have its own derived class for each substate.
 
 <img src = "documentation/StateMachineInheritance.png" width=200 alignment="center">
 
@@ -139,17 +138,18 @@ Car's physic is disabled, a text says "GameOver". After a few seconds, proceed t
 UI Popup is shown displaying the number of checkpoint reached during the last game. Proceeds to __CountdownState__ state once the user press the Trigger button.
 
 ### Obstacles
-Since collecting checkpoints gets boring soon, there are obstacles to increase the increase the stake of the game. Current obstacles implemented include:
+Since collecting checkpoints can get boring, there are obstacles to increase the stake of the game. Current obstacles implemented include:
 
 #### Checkpoint
 <img src = "documentation/checkpoint.png" width=350 alignment="center">
 ##### Position spawning
-Checkpoint is spawn randomly on the scanned environment using `CustomRaycasting.RaycastOnScene()`. Due to the limited amount of space a typical environment scan is, only one checkpoint is spawned at a time. `Checkpoint` object has a trigger `Collider` to detect the player. `OnTriggerEnter`, chekpoint behavior script throws an event that alert `CheckpointManager` which then process and relocate the checkpoint to the new assigned position.
+Checkpoint is spawn randomly on the scanned environment using `CustomRaycasting.RaycastOnScene()`. Due to the limited amount of space for a typical environment scan, only one checkpoint is spawned at a time. `Checkpoint` object has a trigger `Collider` to detect the player. `OnTriggerEnter`, chekpoint behavior script throws an event that alert `CheckpointManager` which then process and relocate the checkpoint to the new assigned position.
 
 ##### Time extension
-Player can prolong their game time by reaching the assigned checkpoint as soon as possible. The time awarded is based on the distance between the current and previous checkpoints. This is not completely balanced and can be edited in `Game.TimeAllowanceSettings`
+Player can extend their game time by reaching the assigned checkpoint before the countdown. The time awarded is based on the distance between the current and previous checkpoints. This is not completely balanced and can be edited in `Game.TimeAllowanceSettings`
 
 Files related to checkpoint is in `Asset/TeamXR/Checkpoint`
+
 #### Tornado
 <img src = "documentation/Tornado.png" width=350 alignment="center">
 
@@ -163,10 +163,10 @@ Tornado has a `Collider` acting as a Trigger that rapidly reduces the remaining 
 Currently, it is difficult to view the UI in VR mode due to the distortion of the Stereoscopic view. The timer and the checkpoint count is difficult to spot and pay attention to according to the user feedback.
 
 ### The car occasionally get stuck upon driving onto crevices or unscanned areas. 
-This is because of the vehicle's physic implementation using Unity `WheelColliders`. This results in the car posibly stuck where it is impassible for regular vehicle without external force. To remedy this, the player can activate a reset sequence in the controller to be randomly spawned somewhere else. 
+This is because of the vehicle's physic implementation using Unity `WheelColliders`. This results in the car possibly stuck where it is impassible for regular vehicle without external force. To remedy this, the player can activate a reset sequence on the controller to be randomly spawned somewhere else. 
 
 ### Wall collision special effects are spawned multiple times per collision. 
-We discovered it was a multi-thread issue involving the `OnCollisionEnter` is called multiple times (3 times) in one frame, we set a boolean value called `isReadyEffect` but it is not being utilized as intended.
+We discovered it was a multi-thread issue involving the `OnCollisionEnter` being called multiple times (3 times) in one frame, we set a boolean value called `isReadyEffect` but it is not being utilized as intended.
 
 ### Checkpoint clips through the scanned terrain as it moves to a new location
 The checkpoint moves to a new location upon contact with the player. Since the transition is linear, the checkpoint will be clipped if the height of certain terrain polygon is higher than the checkpoint.
